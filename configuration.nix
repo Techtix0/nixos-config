@@ -123,7 +123,7 @@
 
     # Removes unwanted KDE packages
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
-      kwalletmanager  # TODO - has not been removed yet
+      kwalletmanager  # TODO - currently dissabled it in ~/.config/kwalletrc
       konsole
     ];
 
