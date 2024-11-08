@@ -4,8 +4,8 @@
   programs.neovim ={
     enable = true;
 
-    # extraConfig = "
-    #   set number
-    # ";
+    extraConfig = "
+      set number
+    ";
   };
 }
