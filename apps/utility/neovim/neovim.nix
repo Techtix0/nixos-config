@@ -1,10 +1,17 @@
-{lib, ...}:
+{pkgs, lib, ...}:
 
 {
-  programs.neovim ={
-    enable = true;
-    defaultEditor = true;
+  imports = [
+    ./ripgrep.nix
+    ./treesitter.nix
+  ];
 
-    extraLuaConfig = builtins.readFile ./init.lua;
+  config = {
+    programs.neovim ={
+      enable = true;
+      defaultEditor = true;
+
+      extraLuaConfig = builtins.readFile ./init.lua;
+    };
   };
 }

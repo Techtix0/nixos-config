@@ -13,7 +13,6 @@ in {
     ./desktop/waybar/waybar.nix  # waybar config
     ./apps/utility/git.nix  # git/github config
     ./apps/utility/neovim/neovim.nix  # neovim config
-		./apps/utility/neovim/ripgrep.nix  # enables ripgrep
   ];
 
   options = {};
@@ -46,7 +45,6 @@ in {
       killall
       nerdfonts
       obsidian
-      tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
       todo
       tt
       vesktop
@@ -58,7 +56,7 @@ in {
     # plain files is through 'home.file'.
     home.file = {
 		#	Neovim config files for init.lua
-			"nvim-lua-config" = {
+			".config/nvim/lua" = {
 				source = ./apps/utility/neovim/lua;
 				recursive = true;
 			};
