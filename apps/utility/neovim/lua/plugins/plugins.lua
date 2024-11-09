@@ -1,3 +1,4 @@
+-- Plugins
 return {
 	-- color scheme
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },

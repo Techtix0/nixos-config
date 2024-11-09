@@ -24,7 +24,7 @@ vim.opt.rtp:prepend(lazypath)
 local opts = {}
 
 -- Plugin configs
-require("lazy").setup(import "plugins")
+require("lazy").setup("plugins")
 
 require("catppuccin").setup({flavor = "mocha"})
 vim.cmd.colorscheme "catppuccin"
