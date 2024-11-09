@@ -13,12 +13,9 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		-- For more lsps remember to install them in apps/services/lsp and import it in lsp.nix
 		config = function()
 			local lspconfig = require("lspconfig")
-			-- keybinds
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-
 			-- Lua lsp
       lspconfig.lua_ls.setup({})
 
@@ -33,7 +30,12 @@ return {
 					},
 				},
 			})
-		end
+
+			-- keybinds
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<leader>ac", vim.lsp.buf.code_action, {})
+	end
 	}
 }
 
