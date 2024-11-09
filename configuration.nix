@@ -106,11 +106,13 @@
       packages = with pkgs; [];
     };
 
-    # Install firefox.
-    # programs.firefox.enable = true;
-
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
+
+    # Set environment variables
+    # environment.variables = {
+    #   EDITOR = "nvim";  # Set default editor
+    # };
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
