@@ -32,7 +32,7 @@
       userSettings = {
         username = "techtix"; # username
         name = "Techtix"; # name/identifier
-        dotfilesDir = "~/.dotfiles"; # absolute path of the local repo
+        dotfilesDir = "/home/${userSettings.username}/.dotfiles"; # absolute path of the local repo
         font = "Intel One Mono"; # Selected font
         fontPkg = pkgs.intel-one-mono; # Font package
       };
