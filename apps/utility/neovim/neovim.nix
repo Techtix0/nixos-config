@@ -7,6 +7,10 @@
   ];
 
   config = {
+		#	Disables stylix from targeting neovim
+    stylix.targets.neovim.enable = false;
+
+		# Neovim config
     programs.neovim ={
       enable = true;
       defaultEditor = true;
