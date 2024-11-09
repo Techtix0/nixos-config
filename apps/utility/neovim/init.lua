@@ -4,7 +4,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.g.mapleader = " "
-
 vim.cmd.set "nowrap" 
 
 
@@ -22,22 +21,10 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
-	-- color scheme
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
-	-- telescope
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-	
-	-- treesitter
-	{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}
-}
 local opts = {}
 
-require("lazy").setup(plugins, opts)
+-- Plugin configs
+require("lazy").setup(import "plugins")
 
 require("catppuccin").setup({flavor = "mocha"})
 vim.cmd.colorscheme "catppuccin"
@@ -51,3 +38,4 @@ require("nvim-treesitter.configs").setup{
   highlight = {enable = true},
 }
 
+vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal left<CR>")
