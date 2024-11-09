@@ -26,12 +26,6 @@ local opts = {}
 -- Plugin configs
 require("lazy").setup("plugins")
 
-require("catppuccin").setup({flavor = "mocha"})
-vim.cmd.colorscheme "catppuccin"
-
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 
 require("nvim-treesitter.configs").setup{
   ensure_installed = {"lua", "nix"},

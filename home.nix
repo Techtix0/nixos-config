@@ -45,6 +45,7 @@ in {
       killall
       nerdfonts
       obsidian
+      tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
       todo
       tt
       vesktop

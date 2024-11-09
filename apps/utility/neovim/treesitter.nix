@@ -1,7 +1,5 @@
-{lib, ...}:
+{pkgs, ...}:
 
 {
-  programs.tree-sitter = {
-    enable = true;
-  };
+  home.packages = [pkgs.tree-sitter];
 }
