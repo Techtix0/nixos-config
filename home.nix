@@ -13,6 +13,7 @@ in {
     ./desktop/waybar/waybar.nix  # waybar config
     ./apps/utility/git.nix  # git/github config
     ./apps/utility/neovim/neovim.nix  # neovim config
+		./apps/utility/neovim/ripgrep.nix  # enables ripgrep
   ];
 
   options = {};
@@ -84,7 +85,7 @@ in {
     #  /etc/profiles/per-user/techtix/etc/profile.d/hm-session-vars.sh
     #
     home.sessionVariables = {
-      # EDITOR = "emacs";
+      # EDITOR = "nvim";  # Neovim is already set as default in ./apps/neovim/neovim.nix
     };
 
     
