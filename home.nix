@@ -57,6 +57,7 @@ in {
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
     home.file = {
+		#	Neovim config files for init.lua
 			"nvim-lua-config" = {
 				source = ./apps/utility/neovim/lua;
 				recursive = true;
