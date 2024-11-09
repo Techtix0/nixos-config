@@ -1,4 +1,4 @@
-{plgs, ...}:
+{pkgs, ...}:
 
 {
 	environment.systemPackages = [
