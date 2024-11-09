@@ -4,6 +4,7 @@
 {
 	imports = [
 		./nixd.nix
+		./lua-lsp.nix
 	];
 }
 

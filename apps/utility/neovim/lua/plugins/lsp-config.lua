@@ -15,7 +15,10 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			local lspconfig = require("lspconfig")
-			lspconfig.lua_lsp.setup({})
+			-- Lua lsp
+      lspconfig.lua_ls.setup({})
+
+			-- Nix lsp
 			lspconfig.nixd.setup({
 				cmd = {"nixd"},
 				settings = {
@@ -29,3 +32,4 @@ return {
 		end
 	}
 }
+
