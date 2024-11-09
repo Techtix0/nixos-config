@@ -8,7 +8,5 @@
     extraConfig = "
       set number
     ";
-
-
   };
 }
