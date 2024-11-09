@@ -3,7 +3,7 @@
 {
   programs.neovim ={
     enable = true;
-    defualtEditor = true;
+    defaultEditor = true;
 
     extraConfig = "
       set number
