@@ -5,7 +5,7 @@ vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.g.mapleader = " "
 vim.cmd.set "nowrap" 
-
+vim.cmd.set "nohlsearch"
 
 -- Install Lazy.vim package manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -26,10 +26,3 @@ local opts = {}
 -- Plugin configs
 require("lazy").setup("plugins")
 
-
-require("nvim-treesitter.configs").setup{
-  ensure_installed = {"lua", "nix"},
-  highlight = {enable = true},
-}
-
-vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal left<CR>")
