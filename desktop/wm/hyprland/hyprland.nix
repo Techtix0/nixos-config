@@ -10,6 +10,7 @@
     enable = true;
     
     settings = {
+      # Waybar startup/refresh script
       exec-once = "~/.dotfiles/desktop/waybar/startup.sh";
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
