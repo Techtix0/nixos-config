@@ -30,6 +30,9 @@
         name = "fira";
       };
     };
+
+    # Disable styling of neovim
+    targets.neovim.enable = false;
   };
 }
 
