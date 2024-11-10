@@ -13,22 +13,26 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+		lazy = false,
 		-- For more lsps remember to install them in apps/services/lsp and import it in lsp.nix
 		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 			-- Lua lsp
-      lspconfig.lua_ls.setup({})
+			lspconfig.lua_ls.setup({
+				capabilities = capabilities
+			})
 
 			-- Nix lsp
 			lspconfig.nixd.setup({
-				cmd = {"nixd"},
+				cmd = { "nixd" },
 				settings = {
 					nixd = {
 						nixpkgs = {
 							expr = "import <nixpkgs> { }",
 						},
 						formatting = {
-							command = {"alejandra"},
+							command = { "alejandra" },
 						},
 					},
 				},
@@ -38,7 +42,6 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ac", vim.lsp.buf.code_action, {})
-	end
+		end
 	}
 }
-

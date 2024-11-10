@@ -12,7 +12,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
-    ./apps/services/lsp	# language servers
+    ./apps/services/lsp # language servers
   ];
 
   options = {};

@@ -1,6 +1,6 @@
 {pkgs, ...}:
 {
 	environment.systemPackages = [
-		pkgs.luasnip
+		pkgs.vimPlugins.luasnip
 	];
 }
