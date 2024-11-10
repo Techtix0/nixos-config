@@ -5,6 +5,7 @@ return {
 		null_ls.setup({
 			source = {
 				null_ls.builtins.formatting.stylua,
+				null_ls.builtins.formatting.alejandra,
 			}
 		})
 

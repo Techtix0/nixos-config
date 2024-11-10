@@ -1,15 +1,19 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, lib, pkgs, systemSettings, userSettings, inputs, ... }:
-
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix # Include the results of the hardware scan.
-			./apps/services/lsp/lsp.nix # language servers
-    ];
+  config,
+  lib,
+  pkgs,
+  systemSettings,
+  userSettings,
+  inputs,
+  ...
+}: {
+  imports = [
+    ./hardware-configuration.nix # Include the results of the hardware scan.
+    ./apps/services/lsp	# language servers
+  ];
 
   options = {};
 
@@ -24,11 +28,11 @@
     #   })
     # ];
 
-
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot = {  # This removes the phantom display (unknown-1)
+    boot = {
+      # This removes the phantom display (unknown-1)
       kernelParams = [
         # Nvidia framebuffer.
         "nvidia-drm.fbdev=1"
@@ -103,7 +107,7 @@
     users.users.${userSettings.username} = {
       isNormalUser = true;
       description = userSettings.name;
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = ["networkmanager" "wheel"];
       packages = [];
     };
 
@@ -126,7 +130,7 @@
 
     # Removes unwanted KDE packages
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
-      kwalletmanager  # TODO - currently dissabled it in ~/.config/kwalletrc
+      kwalletmanager # TODO - currently dissabled it in ~/.config/kwalletrc
       konsole
     ];
 
@@ -171,7 +175,7 @@
 
       # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
       # Enable this if you have graphical corruption issues or application crashes after waking
-      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead of just 
+      # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead of just
       # the bare essentials.
       powerManagement.enable = false;
 
@@ -205,7 +209,7 @@
 
     # Enable flakes
     nix.settings.experimental-features = ["nix-command" "flakes"];
-  
+
     # Enable hyprland
     programs.hyprland.enable = true;
     programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;

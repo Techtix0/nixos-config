@@ -1,17 +1,15 @@
-{pkgs, lib, ...}:
-
-{
+{...}: {
   imports = [
     ./ripgrep.nix
     ./treesitter.nix
   ];
 
   config = {
-		#	Disables stylix from targeting neovim
+    #	Disables stylix from targeting neovim
     stylix.targets.neovim.enable = false;
 
-		# Neovim config
-    programs.neovim ={
+    # Neovim config
+    programs.neovim = {
       enable = true;
       defaultEditor = true;
 
