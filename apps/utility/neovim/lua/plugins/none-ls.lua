@@ -4,7 +4,7 @@ return {
 		local null_ls = require("null-ls")
 		null_ls.setup({
 			source = {
-				null_ls.builtins.formatting.stylelua,
+				null_ls.builtins.formatting.stylua,
 			}
 		})
 	end
