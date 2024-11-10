@@ -27,6 +27,9 @@ return {
 						nixpkgs = {
 							expr = "import <nixpkgs> { }",
 						},
+						formatting = {
+							command = {"alejandra"},
+						},
 					},
 				},
 			})
