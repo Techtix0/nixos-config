@@ -471,7 +471,8 @@
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
         "nixpkgs": "nixpkgs_2",
-        "stylix": "stylix"
+        "stylix": "stylix",
+        "vesktop-nix": "vesktop-nix"
       }
     },
     "stylix": {
@@ -531,6 +532,26 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "vesktop-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1731527104,
+        "narHash": "sha256-wrO9wKi8QWke8QZslRsmv+RYIGiRarPbBzAiqdmrLfk=",
+        "owner": "PierreBorine",
+        "repo": "vesktop-nix",
+        "rev": "31ee11cdb159cef42190b67e287024486fb2d33a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "PierreBorine",
+        "repo": "vesktop-nix",
         "type": "github"
       }
     },
