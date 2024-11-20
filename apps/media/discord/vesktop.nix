@@ -1,9 +1,10 @@
 {
+  inputs,
   pkgs,
   config,
   ...
 }: let
-	# Using stylix colors
+  # Using stylix colors
   base16CSS = with config.lib.stylix.colors;
     pkgs.writeText "base16.css" "
 		:root {
@@ -26,6 +27,8 @@
       }
 	";
 in {
+  imports = [inputs.vesktop-nix.homeManagerModules.default];
+
   programs.vesktop = {
     enable = true;
 
