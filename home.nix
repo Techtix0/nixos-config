@@ -18,6 +18,7 @@ in {
     ./desktop/waybar/waybar.nix # waybar config
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
+		./apps/media/discord/vesktop.nix # vesktop config
   ];
 
   options = {};
