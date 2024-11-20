@@ -1,12 +1,13 @@
 {
-  config,
-  pkgs,
-  userSettings,
-  inputs,
+	config,
+	pkgs,
+	userSettings,
+	inputs,
   ...
 }: let
 in {
   imports = [
+		# TODO - put imports in a default.nix 
     ./style/stylix.nix # Strylix settings
     # ./apps/terminal/bash.nix  # Bash config
     ./apps/terminal/sh.nix # Shell scripts
@@ -52,9 +53,9 @@ in {
       tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
       todo
       tt
-      vesktop
       vscode
       wlogout
+			spotify
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
