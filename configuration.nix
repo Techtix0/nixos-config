@@ -115,9 +115,10 @@
     nixpkgs.config.allowUnfree = true;
 
     # Set environment variables
-    # environment.variables = {
-    #   EDITOR = "nvim";  # Set default editor
-    # };
+    environment.sessionVariables = {
+		 GRIM_DEFAULT_DIR = /home/${userSettings.username}/Pictures/screenshots;
+     #EDITOR = "nvim"; # Set default editor
+    };
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
