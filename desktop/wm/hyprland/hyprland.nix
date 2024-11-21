@@ -82,7 +82,7 @@
         "$mainMod CTRL, up, movewindow, u"
         "$mainMod CTRL, down, movewindow, d"
 
-        # Resize windows
+       # Resize windows
         "$mainMod SHIFT, left, resizeactive, -25 0"
         "$mainMod SHIFT, right, resizeactive, 25 0"
         "$mainMod SHIFT, up, resizeactive, 0 25"
