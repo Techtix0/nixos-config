@@ -19,6 +19,7 @@ in {
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
     ./apps/media/discord/vesktop.nix # vesktop config
+		./apps/media/spotify/spotify.nix # spicetify config	
   ];
 
   options = {};
@@ -56,7 +57,6 @@ in {
       tt
       vscode
       wlogout
-      spotify
       grim
       slurp
     ];

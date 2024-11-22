@@ -19,6 +19,11 @@
       url = "github:PierreBorine/vesktop-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -69,6 +74,7 @@
         modules = [
           ./home.nix
           inputs.stylix.homeManagerModules.stylix
+					inputs.spicetify-nix.homeManagerModules.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
