@@ -4,6 +4,7 @@
   imports = [
     # ./hyprpaper.nix
     # ./hyprlock.nix
+		./wl-clipboard.nix
   ];
 
   wayland.windowManager.hyprland = {
