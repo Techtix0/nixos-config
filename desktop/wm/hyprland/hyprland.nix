@@ -67,7 +67,7 @@
         "$mainMod, P, pseudo," 
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
-				"$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" /home/\"$(whoami)\"/Pictures/screenshots/\"$(date +%Y%m%d-%H%M%S)\".png"
+				"$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh" 
         "ALT, space, exec, $menu"
         "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/desktop/waybar/startup.sh"
 

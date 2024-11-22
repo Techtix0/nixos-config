@@ -1,13 +1,13 @@
 {
-	config,
-	pkgs,
-	userSettings,
-	inputs,
+  config,
+  pkgs,
+  userSettings,
+  inputs,
   ...
 }: let
 in {
   imports = [
-		# TODO - put imports in a default.nix 
+    # TODO - put imports in a default.nix
     ./style/stylix.nix # Strylix settings
     # ./apps/terminal/bash.nix  # Bash config
     ./apps/terminal/sh.nix # Shell scripts
@@ -18,7 +18,7 @@ in {
     ./desktop/waybar/waybar.nix # waybar config
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
-		./apps/media/discord/vesktop.nix # vesktop config
+    ./apps/media/discord/vesktop.nix # vesktop config
   ];
 
   options = {};
@@ -56,9 +56,9 @@ in {
       tt
       vscode
       wlogout
-			spotify
-			grim
-			slurp
+      spotify
+      grim
+      slurp
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
