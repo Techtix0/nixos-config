@@ -6,3 +6,6 @@ vim.g.mapleader = " "
 vim.cmd.set "nowrap" 
 vim.cmd.set "nohlsearch"
 
+-- copy to clipboard
+vim.keymap.set('v', "<leader>y", '"+y')
+
