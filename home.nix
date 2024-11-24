@@ -42,23 +42,24 @@ in {
     # The home.packages option allows you to install Nix packages into your
     # environment.
     home.packages = with pkgs; [
-      bitwarden-desktop
-      btop
-      cava
-      fastfetch
-      feh
-      firefox
-      hyprlang
-      killall
-      nerdfonts
-      obsidian
+      bitwarden-desktop	# password manager
+      btop	# resource monitor
+      cava	#	audio visualizer 
+			dooit	#	todo terminal application 
+      fastfetch	#	system information 
+      feh	#	image viewer 
+      firefox	#	browser 
+      grim	#	screenshot tool for wayland 
+      hyprlang	#	config language for hyprland 
+      killall	#	kill all instances of a process 
+      nerdfonts	#	cool icons
+      obsidian	#	note taking app 
       tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
-      todo
-      tt
-      vscode
-      wlogout
-      grim
-      slurp
+      todo	#	REMOVE 
+      tt	#	terminal typing test 
+      slurp	#	get coordinates for selected location on screen (used with grim) 
+      vscode	#	visual studio code (backup for when neovim doesn't cut it) 
+      wlogout	#	gui start menu 
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
