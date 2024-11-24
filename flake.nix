@@ -25,9 +25,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-		dooit.url = "github:dooit-org/dooit";
-    dooit-extras.url = "github:dooit-org/dooit-extras";
-
   };
 
   outputs = {
