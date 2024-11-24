@@ -20,6 +20,7 @@ in {
     ./apps/utility/neovim/neovim.nix # neovim config
     ./apps/media/discord/vesktop.nix # vesktop config
 		./apps/media/spotify/spotify.nix # spicetify config	
+		./apps/utility/dooit.nix # dooit - todo manager
   ];
 
   options = {};
@@ -45,7 +46,7 @@ in {
       bitwarden-desktop	# password manager
       btop	# resource monitor
       cava	#	audio visualizer 
-			dooit	#	todo terminal application 
+			# dooit	#	todo terminal application 
       fastfetch	#	system information 
       feh	#	image viewer 
       firefox	#	browser 

@@ -24,6 +24,10 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+		dooit.url = "github:dooit-org/dooit";
+    dooit-extras.url = "github:dooit-org/dooit-extras";
+
   };
 
   outputs = {
@@ -47,8 +51,8 @@
       username = "techtix"; # username
       name = "Techtix"; # name/identifier
       dotfilesDir = "/home/${userSettings.username}/.dotfiles"; # absolute path of the local repo
-      font = "Intel One Mono"; # Selected font
-      fontPkg = pkgs.intel-one-mono; # Font package
+     # font = "Intel One Mono"; # Selected font
+     # fontPkg = pkgs.intel-one-mono; # Font package
     };
 
     system = systemSettings.system;
