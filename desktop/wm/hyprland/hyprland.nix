@@ -67,6 +67,7 @@
         "$mainMod, P, pseudo," 
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
+				"$mainMod, F, fullscreen"
 				"$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh" 
         "ALT, space, exec, $menu"
         "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/desktop/waybar/startup.sh"
