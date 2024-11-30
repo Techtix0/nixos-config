@@ -8,4 +8,4 @@
 	environment.systemPackages = [
 		pkgs.rust-analyzer
 	];
-};
+}
