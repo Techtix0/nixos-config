@@ -4,4 +4,4 @@
 	environment.systemPackages = [
 		pkgs.rustfmt
 	];
-};
+}
