@@ -38,6 +38,21 @@ return {
 				},
 			})
 
+			-- Rust lsp
+			lspconfig.rust_analyzer.setup({
+				cmd = { "rust-analyzer" },
+				settings = {
+					rust_analyzer = {
+						nixpkgs = {
+							expr = "import <nixpkgs> { }",
+						},
+						formatting = {
+							command = { "rustfmt" },
+						},
+					},
+				},
+			})
+
 			-- keybinds
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

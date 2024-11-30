@@ -1,6 +1,4 @@
 {
-  config,
-  pkgs,
   userSettings,
   ...
 }: {
@@ -12,6 +10,7 @@
       ll = "ls -al";
       # screenshot = "grim -g \"$(slurp)\" /home/\"$(whoami)\"/Pictures/screenshots/\"$(date +%Y%m%d-%H%M%S)\".png";
     };
+		#bashrcExtra = "PS1=''";
   };
 }
 
