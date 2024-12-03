@@ -37,7 +37,7 @@ in {
     # You should not change this value, even if you update Home Manager. If you do
     # want to update the value, then make sure to first check the Home Manager
     # release notes.
-    home.stateVersion = "24.05"; # Please read the comment before changing.
+    home.stateVersion = "24.11"; # Please read the comment before changing.
 
     # The home.packages option allows you to install Nix packages into your
     # environment.
@@ -55,7 +55,6 @@ in {
       obsidian	#	note taking app 
       tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
       todo	#	REMOVE 
-      tt	#	terminal typing test 
       slurp	#	get coordinates for selected location on screen (used with grim) 
       vscode	#	visual studio code (backup for when neovim doesn't cut it) 
       wlogout	#	gui start menu 
