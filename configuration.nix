@@ -116,7 +116,7 @@
 
     # Set environment variables
     environment.sessionVariables = {
-		 GRIM_DEFAULT_DIR = /home/${userSettings.username}/Pictures/screenshots;
+		 #GRIM_DEFAULT_DIR = /home/${userSettings.username}/Pictures/screenshots;
      #EDITOR = "nvim"; # Set default editor
     };
 
@@ -127,6 +127,7 @@
       wget
       git
       home-manager
+			nixVersions.nix_2_25
     ];
 
     #	Steam install
@@ -171,7 +172,7 @@
     system.stateVersion = "24.11"; # Did you read the comment?
 
     # Enable OpenGL
-    hardware.opengl = {
+    hardware.graphics = {
       enable = true;
     };
 
