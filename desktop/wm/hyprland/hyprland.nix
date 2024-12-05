@@ -6,6 +6,7 @@
     # ./hyprlock.nix
 		./wl-clipboard.nix
   ];
+	stylix.targets.hyprland.enable = false;
 
   wayland.windowManager.hyprland = {
     enable = true;
@@ -51,9 +52,6 @@
           enabled = true;
           size = 8;
         };
-				shadow = {
-					enabled = true;
-				};
       };
 
       input = {
