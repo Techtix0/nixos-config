@@ -1,16 +1,22 @@
-{ pkgs, lib, inputs, systemSettings, ...}: 
-
 {
+  pkgs,
+  lib,
+  inputs,
+  systemSettings,
+  ...
+}: {
   imports = [
     # ./hyprpaper.nix
     # ./hyprlock.nix
-		./wl-clipboard.nix
+    ./wl-clipboard.nix
   ];
-	stylix.targets.hyprland.enable = false;
+
+  # Temporary fix
+  #	stylix.targets.hyprland.enable = false;
 
   wayland.windowManager.hyprland = {
     enable = true;
-    
+
     settings = {
       # Waybar startup/refresh script
       exec-once = "~/.dotfiles/desktop/waybar/startup.sh";
@@ -31,7 +37,7 @@
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "fuzzel";
-    
+
       general = {
         gaps_in = 5;
         gaps_out = 10;
@@ -65,11 +71,11 @@
         # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
         "$mainMod, K, killactive,"
         "$mainMod, V, togglefloating,"
-        "$mainMod, P, pseudo," 
+        "$mainMod, P, pseudo,"
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
-				"$mainMod, F, fullscreen"
-				"$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh" 
+        "$mainMod, F, fullscreen"
+        "$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh"
         "ALT, space, exec, $menu"
         "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/desktop/waybar/startup.sh"
 
@@ -85,12 +91,11 @@
         "$mainMod CTRL, up, movewindow, u"
         "$mainMod CTRL, down, movewindow, d"
 
-       # Resize windows
+        # Resize windows
         "$mainMod SHIFT, left, resizeactive, -25 0"
         "$mainMod SHIFT, right, resizeactive, 25 0"
         "$mainMod SHIFT, up, resizeactive, 0 25"
         "$mainMod SHIFT, down, resizeactive, 0 -25"
-
 
         # Workspace navigation
         "$mainMod ALT, right, workspace, +2"

@@ -13,7 +13,10 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    stylix.url = "github:danth/stylix";
+    stylix = {
+			url = "github:danth/stylix/release-24.11";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
     vesktop-nix = {
       url = "github:PierreBorine/vesktop-nix";

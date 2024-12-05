@@ -1,5 +1,6 @@
 {
   inputs,
+	lib,
   pkgs,
   ...
 }: {
@@ -14,7 +15,7 @@
       hidePodcasts
       shuffle # shuffle+ (special characters are sanitized out of extension names)
     ];
-    theme = spicePkgs.themes.text;
-		colorScheme = "CatppuccinMocha";
+    theme = lib.mkForce spicePkgs.themes.text;
+		colorScheme = lib.mkForce "CatppuccinMocha";
   };
 }
