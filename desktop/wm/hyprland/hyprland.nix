@@ -51,6 +51,9 @@
           enabled = true;
           size = 8;
         };
+				shadow = {
+					enabled = true;
+				};
       };
 
       input = {
