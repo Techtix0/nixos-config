@@ -15,9 +15,13 @@
     ./apps/services/lsp # language servers
   ];
 
-  options = {};
+  options = {
+	};
 
   config = {
+		# Enables xone, driver for xbox controller.
+		hardware.xone.enable = true;
+
     # services.upower.enable = true;
     # nixpkgs.overlays = [
     #   (final: prev:
@@ -128,6 +132,7 @@
       git
       home-manager
 			nixVersions.nix_2_25
+			linuxKernel.packages.linux_zen.xone
     ];
 
     #	Steam install
