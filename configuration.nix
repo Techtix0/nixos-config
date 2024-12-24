@@ -19,6 +19,10 @@
 	};
 
   config = {
+		# Set default shell
+		users.defaultUserShell = pkgs.zsh;
+		programs.zsh.enable = true;
+
 		# Enables xone, driver for xbox controller.
 		hardware.xone.enable = true;
 
