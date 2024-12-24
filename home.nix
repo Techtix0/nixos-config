@@ -20,6 +20,7 @@ in {
     ./apps/utility/neovim/neovim.nix # neovim config
     ./apps/media/discord/vesktop.nix # vesktop config
 		./apps/media/spotify/spotify.nix # spicetify config	
+		./apps/terminal/shell/zsh.nix # shell
   ];
 
   options = {};
