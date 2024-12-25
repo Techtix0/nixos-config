@@ -57,6 +57,7 @@ in {
       slurp #	get coordinates for selected location on screen (used with grim)
       vscode #	visual studio code (backup for when neovim doesn't cut it)
       wlogout #	gui start menu
+			ani-cli # watch anime from the cli
     ];
 
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
