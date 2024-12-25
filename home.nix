@@ -53,7 +53,6 @@ in {
       killall #	kill all instances of a process
       nerdfonts #	cool icons
       obsidian #	note taking app
-      tree-sitter # Downloads the grammar packages which the Lazy.nvim package manager for neovim doesn't do. Allows for better syntax highlighting.
       todo #	REMOVE
       slurp #	get coordinates for selected location on screen (used with grim)
       vscode #	visual studio code (backup for when neovim doesn't cut it)
