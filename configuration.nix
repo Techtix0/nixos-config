@@ -135,7 +135,7 @@
       wget
       git
       home-manager
-			nixVersions.nix_2_25
+			nixVersions.latest
 			linuxKernel.packages.linux_zen.xone
     ];
 
