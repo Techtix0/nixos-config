@@ -1,9 +1,9 @@
 {userSettings, ...}: {
   # The option `users.defaultUserShell` in configuration.nix is required to set zsh as the default shell
 
-  programs.starship = {
-    enable = true;
-  };
+	imports = [
+		./starship.nix
+	];
 
   programs.zsh = {
     enable = true;
