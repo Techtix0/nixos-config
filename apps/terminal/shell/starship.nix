@@ -24,8 +24,9 @@
 
 			custom.nix = {
 				description = "Shows nix icon when detecting *.nix files in the current directory";
-				format = "[$symbol]($style)";
-				symbol = "󱄅 ";
+				format = "[$symbol($output)]($style) ";
+				command = "nix --version | tr -d '[[:alpha:]() ]' ";
+				symbol = "󱄅 v";
 				style = "bold blue";
 				detect_extensions = ["nix"];
 			};

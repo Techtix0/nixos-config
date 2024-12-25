@@ -16,9 +16,10 @@
 			nixdev = "nix develop --command $SHELL";
     };
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = [];
-    };
+		# plugin manager
+    # oh-my-zsh = {
+    #   enable = true;
+    #   plugins = [];
+    # };
   };
 }
