@@ -133,11 +133,18 @@
     environment.systemPackages = with pkgs; [
       vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       wget
-      git
+      git # Version control
       home-manager
-			nixVersions.latest
+			nixVersions.latest # Latest version of the nix language grabbed from nixpkgs
 			linuxKernel.packages.linux_zen.xone
+			openssh #	ssh client 
     ];
+
+		# Enables ssh into system
+		services.openssh = {
+			enable = true;
+			ports = [ 23 ];
+		};
 
     #	Steam install
     programs.steam = {
