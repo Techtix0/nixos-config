@@ -9,6 +9,8 @@
     enable = true;
     enableCompletion = true;
 
+		initExtra = "tabs -2";
+
     shellAliases = {
       ll = "ls -l";
       rebuild = "sudo nixos-rebuild switch --flake " + userSettings.dotfilesDir;
