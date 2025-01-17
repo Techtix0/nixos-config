@@ -13,7 +13,7 @@
       };
 
       directory = {
-				format = " [$path]($style)[$read_only]($read_only_style) ";
+        format = " [$path]($style)[$read_only]($read_only_style) ";
         truncation_length = 1;
         truncation_symbol = "./";
       };
@@ -22,22 +22,22 @@
         format = "[$duration]($style) ";
       };
 
-			custom.nix = {
-				description = "Shows nix icon when detecting *.nix files in the current directory";
-				format = "[$symbol($output)]($style) ";
-				command = "nix --version | tr -d '[[:alpha:]() ]' ";
-				symbol = "󱄅 v";
-				style = "bold blue";
-				detect_extensions = ["nix"];
-			};
+      custom.nix = {
+        description = "Shows nix icon when detecting *.nix files in the current directory";
+        format = "[$symbol($output)]($style) ";
+        command = "nix --version | tr -d '[[:alpha:]() ]' ";
+        symbol = "󱄅 v";
+        style = "bold blue";
+        detect_extensions = ["nix"];
+      };
 
       lua = {
-				format = "[$symbol($version )]($style)";
+        format = "[$symbol($version )]($style)";
         symbol = " ";
       };
 
       rust = {
-				format = "[$symbol($version )]($style)";
+        format = "[$symbol($version )]($style)";
         symbol = " ";
       };
 
@@ -48,7 +48,7 @@
       };
 
       nix_shell = {
-				format = "[$symbol$state( \($name\))]($style)";
+        format = "[$symbol$state( \($name\))]($style)";
         symbol = "󱄅 ";
       };
     };
