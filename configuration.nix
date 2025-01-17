@@ -138,6 +138,7 @@
 			nixVersions.latest # Latest version of the nix language grabbed from nixpkgs
 			linuxKernel.packages.linux_zen.xone
 			openssh #	ssh client 
+			cbonsai # terminal screen saver
     ];
 
 		# Enables ssh into system
