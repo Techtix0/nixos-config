@@ -2,7 +2,6 @@
   imports = [
     ./ripgrep.nix
     ./treesitter.nix
-		./nvim-nio.nix
   ];
 
   config = {
