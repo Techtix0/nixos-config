@@ -2,8 +2,6 @@
   imports = [
     ./ripgrep.nix
     ./treesitter.nix
-		./cpptools.nix
-		./gdb.nix
   ];
 
   config = {
