@@ -2,6 +2,7 @@
   imports = [
     ./ripgrep.nix
     ./treesitter.nix
+		./cpptools.nix
   ];
 
   config = {
