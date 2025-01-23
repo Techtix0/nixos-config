@@ -13,6 +13,7 @@
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./apps/services/lsp # language servers
+		./games/ # game configs
   ];
 
   options = {
