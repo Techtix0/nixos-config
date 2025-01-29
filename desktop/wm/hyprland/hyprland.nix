@@ -23,8 +23,8 @@
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
-        "${systemSettings.monitor1}, 1920x1080, 0x0, 1"
-        "${systemSettings.monitor2}, 1920x1080, 1920x0, 1"
+        "${systemSettings.monitor1}, 1920x1080@144, 0x0, 1"
+        "${systemSettings.monitor2}, 1920x1080@144, 1920x0, 1"
       ];
 
       # WORKSPACES
