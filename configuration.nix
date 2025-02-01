@@ -14,6 +14,7 @@
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./apps/services/lsp # language servers
 		./apps/games # game configs
+		./style # style config 
   ];
 
   options = {
