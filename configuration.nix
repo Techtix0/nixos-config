@@ -142,6 +142,7 @@
 			openssh #	ssh client 
 			cbonsai # terminal screen saver
 			age # encryption tool
+			sops # secret manaing tool
     ];
 
 		# Enables ssh into system
