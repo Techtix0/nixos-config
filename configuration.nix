@@ -26,9 +26,6 @@
 		sops.defaultSopsFormat = "yaml";
 		sops.age.keyFile = "/home/${userSettings.username}/.config/sops/age/keys.txt";
 
-		sops.secrets.git_email = {};
-		sops.secrets.git_username = {};
-
 		# Set default shell
 		users.defaultUserShell = pkgs.zsh;
 		programs.zsh.enable = true;
