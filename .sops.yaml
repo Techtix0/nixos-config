@@ -1,7 +1,7 @@
 keys:
   - &techtix age16u2mnnm6xjw6rs2rmr65q4k89a6368aq6wpq0nsp5s8wjdgjky6q02ttmv
 creation_rules:
-  - path_regex: secrets/secrets.yaml&
+  - path_regex: secrets/secrets.yaml$
     key_groups:
       - age:
         - *techtix
