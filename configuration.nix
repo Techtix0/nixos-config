@@ -141,6 +141,7 @@
 			linuxKernel.packages.linux_zen.xone
 			openssh #	ssh client 
 			cbonsai # terminal screen saver
+			age # encryption tool
     ];
 
 		# Enables ssh into system
