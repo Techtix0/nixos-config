@@ -7,6 +7,8 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+		sops-nix.url = "github:Mic92/sops-nix";
+
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
@@ -64,6 +66,7 @@
         modules = [
           ./configuration.nix
           inputs.stylix.nixosModules.stylix
+					inputs.sops-nix.nixosModules.sops
         ];
         specialArgs = {
           inherit systemSettings;
