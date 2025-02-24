@@ -2,7 +2,7 @@
 {
 	programs.git = {
 		enable = true;
-		# userName = sops.git.username;
-		# userEmail = sops.git.email;
+		userName = ''$(cat ${config.sops.secrets.git_username.path})'';
+		userEmail = ''$(cat ${config.sops.secrets.git_email.path})'';
 	};
 }

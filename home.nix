@@ -43,7 +43,7 @@ in {
     sops = {
       defaultSopsFile = ./secrets/secrets.yaml;
 			defaultSopsFormat = "yaml";
-      age.keyfile = "/home/${userSettings.username}/.config/sops/age/keys.txt";
+      age.keyFile = "/home/${userSettings.username}/.config/sops/age/keys.txt";
     };
 
     # The home.packages option allows you to install Nix packages into your
@@ -70,6 +70,7 @@ in {
     # Home Manager is pretty good at managing dotfiles. The primary way to manage
     # plain files is through 'home.file'.
     home.file = {
+			# TODO move to neovim.nix
       #	Neovim config files for init.lua
       ".config/nvim/lua" = {
         source = ./apps/utility/neovim/lua;
