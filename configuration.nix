@@ -26,6 +26,7 @@
 		sops.defaultSopsFormat = "yaml";
 		sops.age.keyFile = "/home/${userSettings.username}/.config/sops/age/keys.txt";
 
+
 		# Set default shell
 		users.defaultUserShell = pkgs.zsh;
 		programs.zsh.enable = true;

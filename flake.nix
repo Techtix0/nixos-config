@@ -81,6 +81,7 @@
         modules = [
           ./home.nix
           inputs.stylix.homeManagerModules.stylix
+					inputs.sops-nix.homeManagerModules.sops
         ];
         inherit pkgs;
         extraSpecialArgs = {
