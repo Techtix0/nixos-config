@@ -18,3 +18,5 @@ vim.keymap.set('n', "<leader>to", '<cmd>tabonly<cr>')
 vim.keymap.set('n', "<leader>tml", '<cmd>+tabmove<cr>')
 vim.keymap.set('n', "<leader>tmh", '<cmd>-tabmove<cr>')
 
+-- line numbers
+vim.wo.relativenumber = true
