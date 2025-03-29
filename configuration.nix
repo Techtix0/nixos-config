@@ -71,15 +71,15 @@
     i18n.defaultLocale = systemSettings.locale;
 
     i18n.extraLocaleSettings = {
-      LC_ADDRESS = "en_GB.UTF-8";
-      LC_IDENTIFICATION = "en_GB.UTF-8";
-      LC_MEASUREMENT = "en_GB.UTF-8";
-      LC_MONETARY = "en_GB.UTF-8";
-      LC_NAME = "en_GB.UTF-8";
-      LC_NUMERIC = "en_GB.UTF-8";
-      LC_PAPER = "en_GB.UTF-8";
-      LC_TELEPHONE = "en_GB.UTF-8";
-      LC_TIME = "en_GB.UTF-8";
+      LC_ADDRESS = "${systemSettings.locale}";
+      LC_IDENTIFICATION = "${systemSettings.locale}";
+      LC_MEASUREMENT = "${systemSettings.locale}";
+      LC_MONETARY = "${systemSettings.locale}";
+      LC_NAME = "${systemSettings.locale}";
+      LC_NUMERIC = "${systemSettings.locale}";
+      LC_PAPER = "${systemSettings.locale}";
+      LC_TELEPHONE = "${systemSettings.locale}";
+      LC_TIME = "${systemSettings.locale}";
     };
 
     # Enable the X11 windowing system.
