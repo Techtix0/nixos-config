@@ -43,7 +43,7 @@
       system = "x86_64-linux"; # system arch
       hostname = "nixos"; # hostname
       timezone = "Europe/Brussels"; # select timezone
-      locale = "nl_BE.UTF-8"; # select locale
+      locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
       monitor2 = "DP-1"; # secondary monitor
     };

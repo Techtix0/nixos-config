@@ -15,5 +15,14 @@
 
       extraLuaConfig = builtins.readFile ./init.lua;
     };
+
+    home.file = {
+      #	Neovim config files for init.lua
+      ".config/nvim/lua" = {
+        source = ./lua;
+        recursive = true;
+      };
+    };
+
   };
 }
