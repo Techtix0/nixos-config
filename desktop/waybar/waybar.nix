@@ -44,8 +44,6 @@
         };
 
         "hyprland/workspaces" = {
-          # active-only = false;
-          # format = "";
           format = "{windows}";
           format-window-seperator = "\n";
           window-rewrite-default = "";
@@ -89,7 +87,7 @@
 
         "temperature" = {
           format = "{temperatureC}°C";
-          hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
+          hwmon-path = "/sys/class/hwmon/hwmon3/temp3_input";
           interval = 4;
           tooltip = false;
         };
