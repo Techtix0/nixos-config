@@ -50,16 +50,16 @@
           format-window-seperator = "\n";
           window-rewrite-default = "";
           window-rewrite = {
-            "class<firefox>" = "";
-            "title<.*youtube.*>" = "";
-            "class<firefox> title<.*github.*>" = "";
-						"class<firefox> title<.*twitch.*>" = "";
-            "kitty" = "";
+            "kitty" = "";
+						"dolphin" = "";
 						"vesktop" = "";
-						"obsidian" = "";
+						"obsidian" = "";
 						"spotify" = "";
 						"steam" = "";
 						"minecraft" = "󰍳";
+            "class<firefox>" = "󰈹";
+            "title<.*youtube.*>" = "";
+						"title<.*twitch.*>" = "";
           };
         };
 
