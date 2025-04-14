@@ -54,18 +54,16 @@
             "kitty" = "";
             "dolphin" = "";
             "vesktop" = "";
-            "obsidian" = "";
+            "obsidian" = "󰈙";
             "spotify" = "";
             "steam" = "";
             "minecraft" = "󰍳";
             "class<firefox>" = "󰈹";
-            "title<.*youtube.*>" = "";
-            "title<.*twitch.*>" = "";
           };
         };
 
 				"custom/spacer" = {
-					format = "   ";
+					format = "  ";
 				};
 
         "clock" = {
@@ -78,6 +76,7 @@
           format = "{title}";
           rewrite = {
             "(.*) — Mozilla Firefox" = "$1";
+						"(.*) - Obsidian v.\..\.." = "$1";
           };
           separate-outputs = true;
         };

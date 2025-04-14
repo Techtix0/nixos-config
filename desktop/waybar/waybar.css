@@ -23,6 +23,7 @@ tooltip {
 #pulseaudio,
 #sndio {
     padding: 0 5px;
+		color: @base0F;
 }
 #wireplumber.muted,
 #pulseaudio.muted,
@@ -39,6 +40,7 @@ tooltip {
 }
 #network {
     padding: 0 5px;
+		color: @base09;
 }
 #network.disconnected {
     padding: 0 5px;
@@ -69,6 +71,7 @@ tooltip {
 }
 #temperature {
     padding: 0 5px;
+		color: @base0A;
 }
 #mpd {
     padding: 0 5px;
@@ -84,16 +87,19 @@ tooltip {
 }
 #window {
     padding: 0 5px;
+		color: @base0E;
 }
 #custom-launcher {
   padding: 0 10px;
   font-size: 17pt;
   margin-top: 0;
+	color: @base07;
 }
 #custom-poweroff {
   padding: 0 5px;
   margin-right: 13px;
   font-size: 13pt;
+	color: @base08;
 }
 #custom-audio-icon {
   padding: 0 5px;
@@ -103,20 +109,31 @@ tooltip {
   margin-right: 0px;
   padding-left: 5px;
   padding-right: 2px;
+	color: @base0A;
 }
 #temperature {
   padding-left: 0px;
   padding-right: 5px;
 }
 .modules-left #workspaces button {
-    border-bottom: 3px solid transparent;
+    /*border-bottom: 3px solid transparent;*/
     padding-left: 5px;
     padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
+
+.modules-left #workspaces {
+	background-color: @base03;
+	border: 2px solid @base04;
+	border-radius: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
 .modules-left #workspaces button.focused,
 .modules-left #workspaces button.active {
-    border-bottom: 3px solid @base05;
+    /*border-bottom: 3px solid @base05;*/
+		color: @base0E;
 }
 
