@@ -1,6 +1,9 @@
-{config, pkgs, lib,  ...}:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   programs.waybar = {
     enable = true;
     systemd = {
@@ -12,82 +15,90 @@
 
     settings = lib.mkForce [
       {
-      layer = "top";
-      position = "top";
-      margin-top = 7;
-      margin-left = 10;
-      margin-right = 10;
-      
-      modules-left = [
-        "custom/launcher"
-        "hyprland/workspaces"
-      ];
-      modules-center = [
-        "clock"
-      ];
-      modules-right = [
-        "privacy"
-        "wireplumber"
-        "custom/temperature-icon"
-        "temperature"
-        "network"
-        "custom/poweroff"
-      ];
+        layer = "top";
+        position = "top";
+        margin-top = 7;
+        margin-left = 10;
+        margin-right = 10;
 
-      "custom/launcher" = {
-        format = "󱄅";
-        on-click = "fuzzel";
-        tooltip = false;
-      };
+        modules-left = [
+          "custom/launcher"
+          "hyprland/workspaces"
+        ];
+        modules-center = [
+          "clock"
+        ];
+        modules-right = [
+          "privacy"
+          "wireplumber"
+          "custom/temperature-icon"
+          "temperature"
+          "network"
+          "custom/poweroff"
+        ];
 
-      "hyprland/workspaces" = {
-        active-only = false;
-        format = "";        
-      };
+        "custom/launcher" = {
+          format = "󱄅";
+          on-click = "fuzzel";
+          tooltip = false;
+        };
 
-      "clock" = {
-        format = "{:%H:%M %a}";
-        tooltip = true;
-        tooltip-format = "{:%Y-%m-%d}";
-      };
+        "hyprland/workspaces" = {
+          # active-only = false;
+          # format = "";
+          format = "{windows}";
+          format-window-seperator = "\n";
+          window-rewrite-default = "";
+          window-rewrite = {
+            "title<.*youtube.*>" = "";
+            "class<firefox>" = "";
+            "class<firefox> title<.*github.*>" = "";
+            "kitty" = "";
+          };
+        };
 
-      "custom/poweroff" = {
-        format = "";
-        on-click = "wlogout";
-        tooltip = false;
-      };
+        "clock" = {
+          format = "{:%H:%M %a}";
+          tooltip = true;
+          tooltip-format = "{:%Y-%m-%d}";
+        };
 
-      "wireplumber" = {
-        format = "{icon} {volume}%";
-        format-muted = "󰖁 {volume}%";
-        format-icons = ["󰕾"];
-        tooltip = false;
-      };
+        "custom/poweroff" = {
+          format = "";
+          on-click = "wlogout";
+          tooltip = false;
+        };
 
-      "custom/temperature-icon" = {
-        format = "";
-        tooltip = false;
-      };
+        "wireplumber" = {
+          format = "{icon} {volume}%";
+          format-muted = "󰖁 {volume}%";
+          format-icons = ["󰕾"];
+          tooltip = false;
+        };
 
-      "temperature" = {
-        format = "{temperatureC}°C";
-        hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
-        interval = 4;
-        tooltip = false;
-      };
+        "custom/temperature-icon" = {
+          format = "";
+          tooltip = false;
+        };
 
-      "network" = {
-        format = " ";
-        format-disconnected = "󱘖 ";
-        tooltip-format-ethernet = "{ifname} via {gwaddr}";
-        tooltip-format-disconnected = "disconnected";
-      };
+        "temperature" = {
+          format = "{temperatureC}°C";
+          hwmon-path = "/sys/class/hwmon/hwmon3/temp1_input";
+          interval = 4;
+          tooltip = false;
+        };
 
-      "privacy" = {
-        icon-size = 13;
-      };
+        "network" = {
+          format = " ";
+          format-disconnected = "󱘖 ";
+          tooltip-format-ethernet = "{ifname} via {gwaddr}";
+          tooltip-format-disconnected = "disconnected";
+        };
 
-      }];
-  
+        "privacy" = {
+          icon-size = 13;
+        };
+      }
+    ];
   };
 }
