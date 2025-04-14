@@ -23,7 +23,6 @@ tooltip {
 #pulseaudio,
 #sndio {
     padding: 0 5px;
-		color: @base0F;
 }
 #wireplumber.muted,
 #pulseaudio.muted,
@@ -40,7 +39,6 @@ tooltip {
 }
 #network {
     padding: 0 5px;
-		color: @base09;
 }
 #network.disconnected {
     padding: 0 5px;
@@ -71,7 +69,6 @@ tooltip {
 }
 #temperature {
     padding: 0 5px;
-		color: @base0A;
 }
 #mpd {
     padding: 0 5px;
@@ -109,7 +106,6 @@ tooltip {
   margin-right: 0px;
   padding-left: 5px;
   padding-right: 2px;
-	color: @base0A;
 }
 #temperature {
   padding-left: 0px;
