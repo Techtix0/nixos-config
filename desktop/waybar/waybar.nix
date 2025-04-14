@@ -24,11 +24,14 @@
         modules-left = [
           "custom/launcher"
           "hyprland/workspaces"
+					"custom/spacer"
+          "hyprland/window"
         ];
         modules-center = [
           "clock"
         ];
         modules-right = [
+          ""
           "privacy"
           "wireplumber"
           "custom/temperature-icon"
@@ -49,22 +52,34 @@
           window-rewrite-default = "";
           window-rewrite = {
             "kitty" = "";
-						"dolphin" = "";
-						"vesktop" = "";
-						"obsidian" = "";
-						"spotify" = "";
-						"steam" = "";
-						"minecraft" = "󰍳";
+            "dolphin" = "";
+            "vesktop" = "";
+            "obsidian" = "";
+            "spotify" = "";
+            "steam" = "";
+            "minecraft" = "󰍳";
             "class<firefox>" = "󰈹";
             "title<.*youtube.*>" = "";
-						"title<.*twitch.*>" = "";
+            "title<.*twitch.*>" = "";
           };
         };
+
+				"custom/spacer" = {
+					format = "   ";
+				};
 
         "clock" = {
           format = "{:%H:%M %a}";
           tooltip = true;
           tooltip-format = "{:%Y-%m-%d}";
+        };
+
+        "hyprland/window" = {
+          format = "{title}";
+          rewrite = {
+            "(.*) — Mozilla Firefox" = "$1";
+          };
+          separate-outputs = true;
         };
 
         "custom/poweroff" = {
