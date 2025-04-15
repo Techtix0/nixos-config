@@ -5,3 +5,4 @@ return {
         { t("Just a hint of what's to come!"), }
     ),
 }
+
