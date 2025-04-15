@@ -13,7 +13,10 @@
     };
 
     vencordSettings = {
-      themeLinks = ["https://refact0r.github.io/system24/theme/system24.theme.css"];
+      themeLinks = [
+        #"https://refact0r.github.io/system24/theme/system24.theme.css"
+				"https://raw.githubusercontent.com/refact0r/midnight-discord/refs/heads/master/themes/flavors/midnight-catppuccin-mocha.theme.css"
+      ];
       frameless = true;
     };
   };
