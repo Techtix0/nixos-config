@@ -11,9 +11,6 @@
     ./wl-clipboard.nix
   ];
 
-  # Temporary fix
-  #	stylix.targets.hyprland.enable = false;
-
   wayland.windowManager.hyprland = {
     enable = true;
 
@@ -39,8 +36,8 @@
       "$menu" = "fuzzel";
 
       general = {
-        gaps_in = 5;
-        gaps_out = 10;
+        gaps_in = 4;
+        gaps_out = 8;
 
         border_size = 2;
 
@@ -50,7 +47,7 @@
       # LOOKS
       "$opacity" = 0.9;
       decoration = {
-        rounding = 8;
+        rounding = 0;
         # active_opacity = "$opacity";
         inactive_opacity = "$opacity";
         # fullscreen_opacity = "$opacity";

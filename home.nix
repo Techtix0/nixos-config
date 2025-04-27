@@ -13,7 +13,8 @@ in {
     ./apps/terminal/kitty.nix # terminal
     ./apps/utility/fuzzel.nix # application launcher
     ./apps/utility/ranger.nix # CLI file manager
-    ./desktop/wm/hyprland/hyprland.nix # Window manager (also includes imports for hyprlock and hyprpaper)
+    # ./desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
+		./desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
     ./desktop/waybar/waybar.nix # waybar config
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
