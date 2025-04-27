@@ -11,11 +11,10 @@
     description = "Loads profile for openrgb";
     wantedBy = ["multi-user.target"];
     after = ["network.target"];
+    path = ["/run/current-system/sw"];
     script = ''
       openrgb -p profiles/nord.orp
+      openrgb -c 463cbe -m static -b 100
     '';
-    # serviceConfig = {
-    #   ExecStart = ''startup.sh'';
-    # };
   };
 }
