@@ -14,8 +14,9 @@ in {
     ./apps/utility/fuzzel.nix # application launcher
     ./apps/utility/ranger.nix # CLI file manager
     # ./desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
-		./desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
-    ./desktop/waybar/waybar.nix # waybar config
+    ./desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
+    # ./desktop/waybar/waybar-round.nix # waybar config
+    ./desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
     ./apps/media/discord/vesktop.nix # vesktop config
@@ -43,7 +44,7 @@ in {
     # Secret management
     sops = {
       defaultSopsFile = ./secrets/secrets.yaml;
-			defaultSopsFormat = "yaml";
+      defaultSopsFormat = "yaml";
       age.keyFile = "/home/${userSettings.username}/.config/sops/age/keys.txt";
     };
 
