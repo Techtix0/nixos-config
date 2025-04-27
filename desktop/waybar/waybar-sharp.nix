@@ -17,9 +17,10 @@
       {
         layer = "top";
         position = "top";
-        margin-top = 7;
-        margin-left = 10;
-        margin-right = 10;
+        margin-top = 4;
+        margin-left = 8;
+        margin-right = 8;
+				margin-bottom = 0;
 
         modules-left = [
           "custom/launcher"

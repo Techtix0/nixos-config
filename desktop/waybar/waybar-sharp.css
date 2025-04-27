@@ -10,9 +10,12 @@
     font-size: 10pt;
 }
 
+window#waybar {
+}
+
 window#waybar, tooltip {
     background: alpha(@base00, 0.900000);
-    border-radius: 15px;
+    border-radius: 0px;
     color: @base05;
 }
 
