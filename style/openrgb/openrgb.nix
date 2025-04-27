@@ -6,13 +6,16 @@
     motherboard = "amd";
   };
 
-  systemd.user.services.openrgb-startup = {
+  systemd.services.openrgb-startup = {
     enable = true;
-    after = ["network.target"];
     description = "Loads profile for openrgb";
-    serviceConfig = {
-      Type = "simple";
-      ExecStart = ''./startup.sh'';
-    };
+    wantedBy = ["multi-user.target"];
+    after = ["network.target"];
+    script = ''
+      openrgb -p profiles/nord.orp
+    '';
+    # serviceConfig = {
+    #   ExecStart = ''startup.sh'';
+    # };
   };
 }
