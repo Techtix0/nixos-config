@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   programs.waybar = {
     enable = true;
     systemd = {
@@ -20,12 +15,12 @@
         margin-top = 4;
         margin-left = 8;
         margin-right = 8;
-				margin-bottom = 0;
+        margin-bottom = 0;
 
         modules-left = [
           "custom/launcher"
           "hyprland/workspaces"
-					"custom/spacer"
+          "custom/spacer"
           "hyprland/window"
         ];
         modules-center = [
@@ -63,9 +58,9 @@
           };
         };
 
-				"custom/spacer" = {
-					format = "  ";
-				};
+        "custom/spacer" = {
+          format = "  ";
+        };
 
         "clock" = {
           format = "{:%H:%M %a}";
@@ -77,7 +72,7 @@
           format = "{title}";
           rewrite = {
             "(.*) — Mozilla Firefox" = "$1";
-						"(.*) - Obsidian v.\..\.." = "$1";
+            "(.*) - Obsidian v.\..\.." = "$1";
           };
           separate-outputs = true;
         };
