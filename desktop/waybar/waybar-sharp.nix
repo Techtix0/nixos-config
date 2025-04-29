@@ -11,7 +11,7 @@
       target = "graphical-session.target";
     };
 
-    style = lib.mkForce ./waybar-sharp.css;
+    style = lib.mkForce ./waybar.css;
 
     settings = lib.mkForce [
       {
