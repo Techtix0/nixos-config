@@ -23,7 +23,8 @@ window#waybar, tooltip {
 .module {
 	border: 2px solid @base0D;
   padding: 0 2px;
-  margin: 5px 2px;
+  margin: 5px 4px;
+	color: @base07;
 }
 
 tooltip {
@@ -93,16 +94,16 @@ tooltip {
 }
 
 #window {
-	color: @base0F;
 	border: none;
+	color: @base0F;
 }
 
 #custom-launcher {
   padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 5px;
-	padding-right: 12px;
-	margin-left: 5px;
+	padding-right: 10px;
+	margin-left: 7px;
 	color: @base07;
 	font-size: 15pt;
 	border: none;
@@ -112,11 +113,11 @@ tooltip {
   padding-top: 0px;
 	padding-bottom: 0px;
 	padding-left: 5px;
-	padding-right: 10px;
-  margin-right: 13px;
-	margin-right: 5px;
+	padding-right: 13px;
+	margin-right: 7px;
   font-size: 13pt;
 	color: @base08;
+	border: none;
 }
 
 #custom-audio-icon {
@@ -135,15 +136,15 @@ tooltip {
 }
 
 #workspaces {
-	padding-right: 6px;
+	padding-right: 11px;
+	padding-left: 5px;
 }
 
 #workspaces > * {
   padding: 0px 3px;
 }
 
-#custom-spacer {
-  padding: 0 2px;
+#workspaces button.active {
+	color: @base0D;
 }
-
 

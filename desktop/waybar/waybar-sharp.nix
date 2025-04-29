@@ -29,7 +29,6 @@
           ""
           "privacy"
           "wireplumber"
-          "custom/temperature-icon"
           "temperature"
           "network"
           "custom/poweroff"
@@ -57,7 +56,7 @@
         };
 
         "clock" = {
-          format = "{:%H:%M %a}";
+          format = " [ {:%H:%M %a} ] ";
           tooltip = true;
           tooltip-format = "{:%Y-%m-%d}";
         };
@@ -78,26 +77,22 @@
         };
 
         "wireplumber" = {
-          format = "{icon} {volume}%";
-          format-muted = "󰖁 {volume}%";
+          format = " [ {icon} {volume}% ] ";
+          format-muted = " [ 󰖁 {volume}% ] ";
           format-icons = ["󰕾"];
-          tooltip = false;
-        };
+          tooltip = true;
 
-        "custom/temperature-icon" = {
-          format = "";
-          tooltip = false;
         };
 
         "temperature" = {
-          format = "{temperatureC}°C";
+          format = " [  {temperatureC}°C ] ";
           hwmon-path = "/sys/class/hwmon/hwmon3/temp3_input";
           interval = 4;
           tooltip = false;
         };
 
         "network" = {
-          format = " ";
+          format = " [   ] ";
           format-disconnected = "󱘖 ";
           tooltip-format-ethernet = "{ifname} via {gwaddr}";
           tooltip-format-disconnected = "disconnected";
