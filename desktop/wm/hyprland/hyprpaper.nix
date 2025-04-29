@@ -9,14 +9,13 @@
     enable = true;
     settings = {
       preload = [
-        "~/.dotfiles/assets/wallpapers/mangaPIP1.jpg"
         "~/.dotfiles/assets/wallpapers/goldenglow-wallpaper.png"
-				"~/.dotfiles/assets/wallpapers/some-girl.jpg"
+        "~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
       ];
 
       wallpaper = [
-        "${systemSettings.monitor1}, ~/.dotfiles/assets/wallpapers/some-girl.jp"
-        "${systemSettings.monitor2}, ~/.dotfiles/assets/wallpapers/some-girl.jpg"
+        "${systemSettings.monitor1}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
+        "${systemSettings.monitor2}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
       ];
     };
   };
