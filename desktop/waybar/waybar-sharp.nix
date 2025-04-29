@@ -20,7 +20,6 @@
         modules-left = [
           "custom/launcher"
           "hyprland/workspaces"
-          "custom/spacer"
           "hyprland/window"
         ];
         modules-center = [
@@ -37,14 +36,13 @@
         ];
 
         "custom/launcher" = {
-          format = "󱄅";
+          format = "";
           on-click = "fuzzel";
           tooltip = false;
         };
 
         "hyprland/workspaces" = {
           format = "{windows}";
-          format-window-seperator = "\n";
           window-rewrite-default = "";
           window-rewrite = {
             "kitty" = "";
@@ -58,10 +56,6 @@
           };
         };
 
-        "custom/spacer" = {
-          format = "  ";
-        };
-
         "clock" = {
           format = "{:%H:%M %a}";
           tooltip = true;
@@ -69,7 +63,7 @@
         };
 
         "hyprland/window" = {
-          format = "{title}";
+          format = " {title}";
           rewrite = {
             "(.*) — Mozilla Firefox" = "$1";
             "(.*) - Obsidian v.\..\.." = "$1";

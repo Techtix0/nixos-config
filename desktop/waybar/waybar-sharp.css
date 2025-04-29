@@ -11,6 +11,7 @@
 }
 
 window#waybar {
+	border: 2px solid @base0D;
 }
 
 window#waybar, tooltip {
@@ -19,120 +20,130 @@ window#waybar, tooltip {
     color: @base05;
 }
 
+.module {
+	border: 2px solid @base0D;
+  padding: 0 2px;
+  margin: 5px 2px;
+}
+
 tooltip {
     border-color: @base0D;
 }
 #wireplumber,
 #pulseaudio,
 #sndio {
-    padding: 0 5px;
 }
+
 #wireplumber.muted,
 #pulseaudio.muted,
 #sndio.muted {
-    padding: 0 5px;
 }
+
 #upower,
 #battery {
-    padding: 0 5px;
 }
+
 #upower.charging,
 #battery.Charging {
-    padding: 0 5px;
 }
+
 #network {
-    padding: 0 5px;
 }
+
 #network.disconnected {
-    padding: 0 5px;
 }
+
 #user {
-    padding: 0 5px;
 }
+
 #clock {
-    padding: 0 5px;
-    margin: 5px 0;
 }
+
 #custom-clock-icon {
   padding: 0 7px;
   margin-top: 0px;
   font-size: 11pt;
 }
+
 #backlight {
-    padding: 0 5px;
 }
+
 #cpu {
-    padding: 0 5px;
 }
+
 #disk {
-    padding: 0 5px;
 }
+
 #idle_inhibitor {
-    padding: 0 5px;
 }
+
 #temperature {
-    padding: 0 5px;
 }
+
 #mpd {
-    padding: 0 5px;
 }
+
 #language {
-    padding: 0 5px;
 }
+
 #keyboard-state {
-    padding: 0 5px;
 }
+
 #memory {
-    padding: 0 5px;
 }
+
 #window {
-    padding: 0 5px;
-		color: @base0E;
+	color: @base0F;
+	border: none;
 }
+
 #custom-launcher {
-  padding: 0 10px;
-  font-size: 17pt;
-  margin-top: 0;
+  padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 12px;
+	margin-left: 5px;
 	color: @base07;
+	font-size: 15pt;
+	border: none;
 }
+
 #custom-poweroff {
-  padding: 0 5px;
+  padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 10px;
   margin-right: 13px;
+	margin-right: 5px;
   font-size: 13pt;
 	color: @base08;
 }
+
 #custom-audio-icon {
-  padding: 0 5px;
+  padding: 0 2px;
   font-size: 13pt;
 }
+
 #custom-temperature-icon {
-  margin-right: 0px;
   padding-left: 5px;
   padding-right: 2px;
 }
+
 #temperature {
   padding-left: 0px;
   padding-right: 5px;
 }
-.modules-left #workspaces button {
-    /*border-bottom: 3px solid transparent;*/
-    padding-left: 5px;
-    padding-right: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+
+#workspaces {
+	padding-right: 6px;
 }
 
-.modules-left #workspaces {
-	background-color: @base03;
-	border: 2px solid @base04;
-	border-radius: 10px;
-	margin-top: 5px;
-	margin-bottom: 5px;
+#workspaces > * {
+  padding: 0px 3px;
 }
 
-.modules-left #workspaces button.focused,
-.modules-left #workspaces button.active {
-    /*border-bottom: 3px solid @base05;*/
-		color: @base0E;
+#custom-spacer {
+  padding: 0 2px;
 }
+
 
