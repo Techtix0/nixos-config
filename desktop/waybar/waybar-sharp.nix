@@ -47,7 +47,7 @@
             "kitty" = "";
             "dolphin" = "";
             "vesktop" = "";
-            "obsidian" = "󰈙";
+            "obsidian" = " 󰈙";
             "spotify" = "";
             "steam" = "";
             "minecraft" = "󰍳";
