@@ -107,8 +107,6 @@
             "privacy.trackingprotection.enabled" = true;
             "dom.security.https_only_mode" = true;
           };
-
-          search = {};
         };
       };
     };
