@@ -97,6 +97,9 @@ in {
 
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             ublock-origin
+						sponsorblock
+						sidebery
+						betterttv
           ];
         };
       };
