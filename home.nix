@@ -57,7 +57,7 @@ in {
       cava #	audio visualizer
       fastfetch #	system information
       feh #	image viewer
-      firefox #	browser
+      # firefox #	browser
       grim #	screenshot tool for wayland
       hyprlang #	config language for hyprland
       killall #	kill all instances of a process
