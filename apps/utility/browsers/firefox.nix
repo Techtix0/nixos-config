@@ -3,13 +3,8 @@
   pkgs,
   lib,
   ...
-}: let
-  # nur-no-pkgs = import (builtins.fetchTarball {
-  # 	url = "https://github.com/nix-community/NUR/archive/main.tar.gz";
-  # 	sha256 = "0l72x2ylg1ibmva1l6bqr8ja6ijn29haznm9q0a2xyhwja0c9d9x";
-  # 	}) {};
-in {
-  # imports = lib.attrValues nur-no-pkgs.repos.rycee.firefox-addons;
+}: {
+  imports = [];
 
   config = {
     programs.firefox = {
@@ -18,8 +13,28 @@ in {
         default = {
           id = 0;
           isDefault = true;
+
+          userChrome = builtins.readFile ./userChrome.css;
+
+          extensions = {
+            packages = with pkgs.nur.repos.rycee.firefox-addons; [
+              ublock-origin
+              sponsorblock
+              sidebery
+              betterttv
+            ];
+
+						settings."sidebery".settings = builtins.readFile ./extensions/sidebery-settings.json;
+          };
+
           settings = {
             "browser.startup.homepage" = "about:home";
+
+            # Enable custom stylesheets
+            "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+            # Auto enable extensions
+            "extensions.autoDisableScopes" = 0;
 
             # Disable irritating first-run stuff
             "browser.disableResetPrompt" = true;
@@ -94,13 +109,6 @@ in {
           };
 
           search = {};
-
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-            ublock-origin
-						sponsorblock
-						sidebery
-						betterttv
-          ];
         };
       };
     };

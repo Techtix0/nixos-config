@@ -1,0 +1,223 @@
+@import url("sidebar.css");
+
+:root {
+  --toolbar-field-focus-border-color: transparent !important;
+  --urlbar-background-color: #201929;
+
+}
+
+:root[privatebrowsingmode="temporary"] {
+  --urlbar-background-color: #25003E;
+}
+
+
+/* Clean Urlbar */
+
+#urlbar,
+#searchbar {
+  font-size: 13px !important;
+  margin-top: 1px !important;
+}
+
+#urlbar-background,
+#searchbar {
+  border: none !important;
+  background-color: var(--urlbar-background-color) !important;
+  animation-name: none !important;
+  box-shadow: none !important;
+}
+
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+  background-color: var(--urlbar-background-color) !important;
+  background-image: var(--lwt-additional-images) !important;
+  background-repeat: var(--lwt-background-tiling) !important;
+  background-position: var(--lwt-background-alignment) !important;
+}
+
+#urlbar[open]>.urlbarView>.urlbarView-body-outer>.urlbarView-body-inner {
+  border: none !important;
+}
+
+.urlbarView-row[selected]>.urlbarView-row-inner,
+.urlbarView-row-inner[selected] {
+  background: #3A3941 !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+  box-shadow: none !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+
+
+toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active)>.toolbarbutton-icon {
+  transition: background linear 0.5s;
+}
+
+/* Hiding Tabs Toolbar */
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar>.toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+  visibility: collapse !important;
+}
+
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar .titlebar-spacer {
+  border-inline-end: none;
+}
+
+/* Moving Windows Control */
+
+#nav-bar {
+  margin-left: 0px !important;
+  border-top: 0px !important;
+  margin-top: 0px;
+  padding-right: 130px !important
+}
+
+#titlebar {
+  appearance: none !important;
+  height: 0px;
+}
+
+
+#TabsToolbar>.titlebar-buttonbox-container {
+  display: block;
+/*   position: absolute; */
+  top: 14px;
+}
+
+#TabsToolbar {
+/*   background: #2B2A34 !important;
+  background-color: #2B2A34 ! important;
+  color: #2B2A34 !important; */
+}
+
+/* Page Actions Hide and Show on Hover */
+
+#page-action-buttons:not(:hover) .urlbar-page-action,
+#page-action-buttons:not(:hover) #star-button {
+  width: 0px !important;
+  min-width: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 10px !important;
+  margin-right: -15px !important;
+  transition: all 250ms ease-in-out;
+}
+
+#page-action-buttons:not(:hover) #userContext-indicator {
+  margin-right: 37px !important;
+  transition: all 250ms ease-in-out;
+}
+
+#page-action-buttons:hover .urlbar-page-action,
+#page-action-buttons:hover #star-button {
+  visibility: visible;
+  min-width: unset !important;
+}
+
+#page-action-buttons:hover #userContext-indicator {
+  margin-right: 0px !important;
+}
+
+#page-action-buttons::after {
+  content: "•••";
+  position: absolute;
+  margin-top: 0px;
+  font-size: 0.7em;
+  opacity: 0.5;
+  right: 6px;
+  transition: all 50ms ease-in-out;
+}
+
+
+
+#page-action-buttons:hover::after {
+  display: none !important;
+  width: 0px !important;
+  margin-left: 0px !important;
+  transition: all 50ms ease-in-out;
+}
+
+
+
+/* Move findbar to top right */
+.browserContainer>findbar {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  contain: content;
+  border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
+}
+
+/* Hide status */
+findbar .findbar-find-status {
+  display: none;
+}
+
+/* Replace checkboxes with buttons */
+findbar .checkbox-check {
+  display: none !important;
+}
+
+findbar checkbox {
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--toolbarbutton-border-radius);
+  padding: 2px 4px;
+  margin: -2px 4px !important;
+  transition: 0.1s ease-in-out;
+}
+
+findbar checkbox[checked="true"] {
+  background: var(--button-active-bgcolor);
+  transition: 0.1s ease-in-out;
+}
+
+/* own additions */
+#identity-box {
+  display: none;
+}
+
+/* hides search suggestions when typing in url box */
+#nav-bar {
+  z-index: 0;
+} 
+
+#titlebar {
+  z-index: 100 !important;
+}
+
+.titlebar-button.titlebar-min, .titlebar-button.titlebar-max, .titlebar-button.titlebar-close, .titlebar-button.titlebar-restore {
+  height: 40px;
+}
+
+#PersonalToolbar {
+  z-index: 10;
+}
+
+#menubar-items {
+	display: none;
+}
+
+#TabsToolbar { 
+	display: none;
+}
+
+#toolbar-menubar {
+	justify-content: right;
+	z-index: 100;
+	height: 0px;
+}
+
+.titlebar-buttonbox {
+	margin-top: 20px;
+}
+
+spacer {
+	display: none;
+}
