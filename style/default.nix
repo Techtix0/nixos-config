@@ -1,6 +1,6 @@
 {...}:
 {
 	imports = [
-		./openrgb.nix # RGB control
+		./openrgb/openrgb.nix # RGB control
 	];
 }

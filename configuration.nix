@@ -148,6 +148,9 @@
 			cbonsai # terminal screen saver
 			age # encryption tool
 			sops # secret manaing tool
+			onefetch # git information fetch tool like fastfetch/neofetch
+			zip 
+			unzip # compression tools
     ];
 
 		# Enables ssh into system

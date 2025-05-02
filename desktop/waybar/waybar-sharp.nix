@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: {
+{lib, ...}: {
   programs.waybar = {
     enable = true;
     systemd = {
@@ -11,20 +6,20 @@
       target = "graphical-session.target";
     };
 
-    style = lib.mkForce ./waybar.css;
+    style = lib.mkForce ./waybar-sharp.css;
 
     settings = lib.mkForce [
       {
         layer = "top";
         position = "top";
-        margin-top = 7;
-        margin-left = 10;
-        margin-right = 10;
+        margin-top = 4;
+        margin-left = 8;
+        margin-right = 8;
+        margin-bottom = 0;
 
         modules-left = [
           "custom/launcher"
           "hyprland/workspaces"
-					"custom/spacer"
           "hyprland/window"
         ];
         modules-center = [
@@ -34,27 +29,25 @@
           ""
           "privacy"
           "wireplumber"
-          "custom/temperature-icon"
           "temperature"
           "network"
           "custom/poweroff"
         ];
 
         "custom/launcher" = {
-          format = "󱄅";
+          format = "";
           on-click = "fuzzel";
           tooltip = false;
         };
 
         "hyprland/workspaces" = {
           format = "{windows}";
-          format-window-seperator = "\n";
           window-rewrite-default = "";
           window-rewrite = {
             "kitty" = "";
             "dolphin" = "";
             "vesktop" = "";
-            "obsidian" = "󰈙";
+            "obsidian" = " 󰈙";
             "spotify" = "";
             "steam" = "";
             "minecraft" = "󰍳";
@@ -62,21 +55,17 @@
           };
         };
 
-				"custom/spacer" = {
-					format = "  ";
-				};
-
         "clock" = {
-          format = "{:%H:%M %a}";
+          format = " [ {:%H:%M %a} ] ";
           tooltip = true;
           tooltip-format = "{:%Y-%m-%d}";
         };
 
         "hyprland/window" = {
-          format = "{title}";
+          format = " {title}";
           rewrite = {
             "(.*) — Mozilla Firefox" = "$1";
-						"(.*) - Obsidian v.\..\.." = "$1";
+            "(.*) - Obsidian v.\..\.." = "$1";
           };
           separate-outputs = true;
         };
@@ -88,26 +77,22 @@
         };
 
         "wireplumber" = {
-          format = "{icon} {volume}%";
-          format-muted = "󰖁 {volume}%";
+          format = " [ {icon} {volume}% ] ";
+          format-muted = " [ 󰖁 {volume}% ] ";
           format-icons = ["󰕾"];
-          tooltip = false;
-        };
+          tooltip = true;
 
-        "custom/temperature-icon" = {
-          format = "";
-          tooltip = false;
         };
 
         "temperature" = {
-          format = "{temperatureC}°C";
+          format = " [  {temperatureC}°C ] ";
           hwmon-path = "/sys/class/hwmon/hwmon3/temp3_input";
           interval = 4;
           tooltip = false;
         };
 
         "network" = {
-          format = " ";
+          format = " [   ] ";
           format-disconnected = "󱘖 ";
           tooltip-format-ethernet = "{ifname} via {gwaddr}";
           tooltip-format-disconnected = "disconnected";

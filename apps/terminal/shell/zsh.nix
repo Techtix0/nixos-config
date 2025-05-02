@@ -9,7 +9,7 @@
     enable = true;
     enableCompletion = true;
 
-    initExtra = "tabs -2";
+    initExtra = "tabs -2\nfastfetch";
 
     shellAliases = {
       ll = "ls -l";

@@ -1,0 +1,150 @@
+@define-color base00 #303446; @define-color base01 #292c3c; @define-color base02 #414559; @define-color base03 #51576d;
+@define-color base04 #626880; @define-color base05 #c6d0f5; @define-color base06 #f2d5cf; @define-color base07 #babbf1;
+
+@define-color base08 #e78284; @define-color base09 #ef9f76; @define-color base0A #e5c890; @define-color base0B #a6d189;
+@define-color base0C #81c8be; @define-color base0D #8caaee; @define-color base0E #ca9ee6; @define-color base0F #eebebe;
+
+* {
+    font-family: "monospace";
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+window#waybar {
+	border: 2px solid @base0D;
+}
+
+window#waybar, tooltip {
+    background: alpha(@base00, 0.900000);
+    border-radius: 0px;
+    color: @base05;
+}
+
+.module {
+	border: 2px solid @base0D;
+  padding: 0 2px;
+  margin: 5px 4px;
+	color: @base07;
+}
+
+tooltip {
+    border-color: @base0D;
+}
+#wireplumber,
+#pulseaudio,
+#sndio {
+}
+
+#wireplumber.muted,
+#pulseaudio.muted,
+#sndio.muted {
+}
+
+#upower,
+#battery {
+}
+
+#upower.charging,
+#battery.Charging {
+}
+
+#network {
+}
+
+#network.disconnected {
+}
+
+#user {
+}
+
+#clock {
+}
+
+#custom-clock-icon {
+  padding: 0 7px;
+  margin-top: 0px;
+  font-size: 11pt;
+}
+
+#backlight {
+}
+
+#cpu {
+}
+
+#disk {
+}
+
+#idle_inhibitor {
+}
+
+#temperature {
+}
+
+#mpd {
+}
+
+#language {
+}
+
+#keyboard-state {
+}
+
+#memory {
+}
+
+#window {
+	border: none;
+	color: @base0F;
+}
+
+#custom-launcher {
+  padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 10px;
+	margin-left: 7px;
+	color: @base07;
+	font-size: 15pt;
+	border: none;
+}
+
+#custom-poweroff {
+  padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 13px;
+	margin-right: 7px;
+  font-size: 13pt;
+	color: @base08;
+	border: none;
+}
+
+#custom-audio-icon {
+  padding: 0 2px;
+  font-size: 13pt;
+}
+
+#custom-temperature-icon {
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+#temperature {
+  padding-left: 0px;
+  padding-right: 5px;
+}
+
+#workspaces {
+	padding-right: 11px;
+	padding-left: 5px;
+}
+
+#workspaces > * {
+  padding: 0px 3px;
+}
+
+#workspaces button.active {
+	color: @base0D;
+}
+
