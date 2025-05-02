@@ -1,7 +1,7 @@
 :root {
   --wide-tab-width: 300px;
   --thin-tab-width: 35px;
-  --sidebar-background: #2b2a33;
+  --sidebar-background: @base09;
 }
 
 #sidebar-box>#browser,

@@ -7,6 +7,15 @@
   imports = [];
 
   config = {
+    # Styling options
+    stylix.targets.firefox = {
+			enable = false;
+      profileNames = ["default"];
+
+			# Enable when new release of stylix/NixOS comes out (currently not available in 24.11 but option added in https://github.com/danth/stylix/commit/3a686a20b8f4dc026e561c1c5a85671c8cfeeb4f)
+      # colorTheme.enable = true;
+    };
+
     programs.firefox = {
       enable = true;
       profiles = {
@@ -14,17 +23,29 @@
           id = 0;
           isDefault = true;
 
-          userChrome = builtins.readFile ./userChrome.css;
+          userChrome = builtins.readFile ./userChrome.css + builtins.readFile ./sidebar.css;
 
-          extensions = {
-            packages = with pkgs.nur.repos.rycee.firefox-addons; [
-              ublock-origin
-              sponsorblock
-              sidebery
-              betterttv
-            ];
+          # extensions = {
+          #   packages = with pkgs.nur.repos.rycee.firefox-addons; [
+          #     ublock-origin
+          #     sponsorblock
+          #     sidebery
+          #     betterttv
+          #   ];
 
-						settings."sidebery".settings = builtins.readFile ./extensions/sidebery-settings.json;
+          # 	settings."sidebery".settings = builtins.readFile ./extensions/sidebery-settings.json;
+          # };
+
+          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+            ublock-origin
+            sponsorblock
+            sidebery
+            betterttv
+          ];
+
+          search = {
+            force = true;
+            default = "DuckDuckGo";
           };
 
           settings = {
@@ -32,9 +53,10 @@
 
             # Enable custom stylesheets
             "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
-
             # Auto enable extensions
             "extensions.autoDisableScopes" = 0;
+            # Disable bookmark bar
+            "browser.toolbars.bookmarks.visibility" = "never";
 
             # Disable irritating first-run stuff
             "browser.disableResetPrompt" = true;
