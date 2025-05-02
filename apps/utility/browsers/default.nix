@@ -1,0 +1,6 @@
+{...}:
+{
+	imports = [
+		./librewolf.nix
+	];
+}
