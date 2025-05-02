@@ -3,6 +3,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+		nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -82,6 +86,7 @@
           ./home.nix
           inputs.stylix.homeManagerModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
+					inputs.nur.modules.homeManager.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
