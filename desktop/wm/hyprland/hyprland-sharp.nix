@@ -6,7 +6,7 @@
   ...
 }: {
   imports = [
-    ./hyprpaper.nix
+    # ./hyprpaper.nix
     # ./hyprlock.nix
     ./wl-clipboard.nix
   ];
