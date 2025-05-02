@@ -2,6 +2,6 @@
 {
 	imports = [
 		./librewolf.nix
-		./firefox.nix
+		./firefox/firefox.nix
 	];
 }
