@@ -49,7 +49,7 @@
       timezone = "Europe/Brussels"; # select timezone
       locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
-      monitor2 = "DP-1"; # secondary monitor
+      monitor2 = "DP-2"; # secondary monitor
     };
 
     # ----- USER SETTINGS ----- #
