@@ -1,7 +1,5 @@
 {
   inputs,
-  pkgs,
-  config,
   ...
 }: {
   imports = [inputs.vesktop-nix.homeManagerModules.default];

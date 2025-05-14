@@ -19,7 +19,7 @@ in {
     ./desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
     ./apps/utility/git.nix # git/github config
     ./apps/utility/neovim/neovim.nix # neovim config
-    ./apps/media/discord/vesktop.nix # vesktop config
+    # ./apps/media/discord/vesktop.nix # vesktop config
     ./apps/media/spotify/spotify.nix # spicetify config
     ./apps/terminal/shell/zsh.nix # shell
 		./apps/utility/browsers # web browsers

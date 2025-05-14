@@ -151,6 +151,7 @@
 			onefetch # git information fetch tool like fastfetch/neofetch
 			zip 
 			unzip # compression tools
+			vesktop # discord client
     ];
 
 		# Enables ssh into system

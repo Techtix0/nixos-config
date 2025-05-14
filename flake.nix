@@ -24,10 +24,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-    vesktop-nix = {
-      url = "github:PierreBorine/vesktop-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # vesktop-nix = {
+    #   url = "github:PierreBorine/vesktop-nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
