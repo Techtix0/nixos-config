@@ -152,7 +152,7 @@
 			zip 
 			unzip # compression tools
 			vesktop # discord client
-			# vlc # media player
+			vlc # media player
     ];
 
 		# Enables ssh into system
