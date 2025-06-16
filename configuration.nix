@@ -153,6 +153,7 @@
 			unzip # compression tools
 			vesktop # discord client
 			vlc # media player
+			godot # Game engine
     ];
 
 		# Enables ssh into system
