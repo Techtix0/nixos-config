@@ -154,6 +154,7 @@
 			vesktop # discord client
 			vlc # media player
 			godot # Game engine
+			aseprite # Pixel art tool
     ];
 
 		# Enables ssh into system
