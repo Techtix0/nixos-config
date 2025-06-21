@@ -36,7 +36,7 @@
           # 	settings."sidebery".settings = builtins.readFile ./extensions/sidebery-settings.json;
           # };
 
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [
             ublock-origin
             sponsorblock
             sidebery
@@ -45,7 +45,7 @@
 
           search = {
             force = true;
-            default = "DuckDuckGo";
+            default = "ddg";
           };
 
           settings = {

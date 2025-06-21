@@ -84,7 +84,7 @@
       techtix = home-manager.lib.homeManagerConfiguration {
         modules = [
           ./home.nix
-          inputs.stylix.homeManagerModules.stylix
+          inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
         ];

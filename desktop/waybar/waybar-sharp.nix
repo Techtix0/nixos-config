@@ -52,6 +52,7 @@
             "steam" = "";
             "minecraft" = "󰍳";
             "class<firefox>" = "󰈹";
+						"godot" = "";
           };
         };
 

@@ -157,6 +157,12 @@
 			aseprite # Pixel art tool
     ];
 
+		# Fonts
+		fonts.packages = with pkgs; [
+			nerd-fonts.fira-mono
+			nerd-fonts.symbols-only
+		];
+
 		# Enables ssh into system
 		services.openssh = {
 			enable = true;
