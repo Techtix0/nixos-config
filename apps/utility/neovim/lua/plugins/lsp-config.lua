@@ -54,14 +54,17 @@ return {
 			})
 
 			-- gdscipt lsp
-			if is_godot_project then
-				lspconfig.gdscript.setup()
-			end
+			lspconfig.gdscript.setup()
 
 			-- keybinds
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "<leader>ac", vim.lsp.buf.code_action, {})
+
+			-- A keymap that starts the server for godot LSP and DAP
+			vim.keymap.set("n", "<leader>sg", function()
+				vim.fn.serverstart("127.0.0.1:6004")
+			end, {noremap = true})
 		end
 	}
 }

@@ -20,6 +20,6 @@ local is_server_running = vim.uv.fs_stat(godot_project_path .. '/server.pipe')
 
 -- start server, if not already running
 if is_godot_project and not is_server_running then
-	vim.fn.startserver([godot_project_path .. '/server.pipe'])
+	vim.fn.startserver(godot_project_path .. '/server.pipe')
 end
 
