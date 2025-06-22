@@ -14,7 +14,7 @@
     shellAliases = {
       ll = "ls -l";
       rebuild = "sudo nixos-rebuild switch --flake " + userSettings.dotfilesDir;
-      homeswitch = "home-manager switch --flake " + userSettings.dotfilesDir;
+      homeswitch = "sudo home-manager switch --flake " + userSettings.dotfilesDir;
       nixdev = "nix develop --command $SHELL";
     };
 
