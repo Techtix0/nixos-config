@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 # This script lets godot use neovim as an external editor
+
 # Change the following options in godot to use this script:
 #	editor settings -> general -> text editor -> external
 #	Exec path = /home/<username>/.dotfiles/scripts/godot-neovim.sh
 #	Exec flags = {file}
 #	Use external editor = true
+# editor settings -> text editor -> behaviour
+# auto reload scripts on external change = true
 
 if [ ! -f /tmp/godot.pipe ]; then
 	# Start server if not running already
