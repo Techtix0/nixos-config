@@ -10,11 +10,9 @@
 # editor settings -> text editor -> behaviour
 # auto reload scripts on external change = true
 
-if [ ! -f /tmp/godot.pipe ]; then
+if [ ! -e "/tmp/godot.pipe" ]; then
 	# Start server if not running already
 	kitty nvim --listen /tmp/godot.pipe
 fi
-
 # Pass the required file to load in nvim	
 nvim --server /tmp/godot.pipe --remote-send "<C-\><C-N>:e $1<CR>" 
-
