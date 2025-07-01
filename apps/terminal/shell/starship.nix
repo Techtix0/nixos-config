@@ -43,7 +43,7 @@
 
       shlvl = {
         disabled = false;
-        threshold = 2;
+        threshold = 4;
         symbol = "󱞪 ";
       };
 
