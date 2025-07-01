@@ -3,6 +3,7 @@
   lib,
   inputs,
   systemSettings,
+	userSettings,
   ...
 }: {
   imports = [
@@ -72,9 +73,9 @@
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, F, fullscreen"
-        "$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh"
+        "$mainMod SHIFT, S, exec, bash ${userSettings.dotfilesDir}/desktop/wm/hyprland/screenshot.sh"
         "ALT, space, exec, $menu"
-        "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/desktop/waybar/startup.sh"
+        "$mainMod CTRL SHIFT, B, exec, bash ${userSettings.dotfilesDir}/desktop/waybar/startup.sh"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
