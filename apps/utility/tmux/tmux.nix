@@ -11,9 +11,10 @@
   config = {
     programs.tmux = {
       enable = true;
-      shortcut = "a";
+      shortcut = "C-a";
 
       plugins = with pkgs.tmuxPlugins; [
+				vim-tmux-navigator
       ];
 
       extraConfig = lib.readFile ./tmux.conf;
