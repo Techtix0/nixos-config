@@ -155,6 +155,7 @@
 			vlc # media player
 			godot # Game engine
 			aseprite # Pixel art tool
+			jq # command line json processor
     ];
 
 		# Fonts
