@@ -1,4 +1,4 @@
-{lib, ...}: {
+{lib, userSettings, ...}: {
   programs.waybar = {
     enable = true;
     systemd = {
@@ -81,6 +81,7 @@
           format = " [ {icon} {volume}% ] ";
           format-muted = " [ 󰖁 {volume}% ] ";
           format-icons = ["󰕾"];
+					on-click = "bash " + userSettings.dotfilesDir + "/scripts/audio-switcher.sh";
           tooltip = true;
 
         };
