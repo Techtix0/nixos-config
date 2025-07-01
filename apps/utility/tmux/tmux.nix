@@ -16,19 +16,7 @@
       plugins = with pkgs.tmuxPlugins; [
       ];
 
-      extraConfig = "
-					# Enables mouse support
-					set -g mouse on
-
-					# Sets vim keybinds to switch between panes
-					bind-key h select-pane -L
-					bind-key j select-pane -D
-					bind-key k select-pane -U
-					bind-key l select-pane -R
-
-					# Sets tmux status bar to top
-					set-option -g status-position top
-				";
+      extraConfig = lib.readFile ./tmux.conf;
     };
   };
 }
