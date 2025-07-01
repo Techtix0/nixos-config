@@ -24,6 +24,7 @@ in {
     ./apps/media/spotify/spotify.nix # spicetify config
     ./apps/terminal/shell/zsh.nix # shell
 		./apps/utility/browsers # web browsers
+		./apps/utility/tmux # tmux config
   ];
 
   options = {};
