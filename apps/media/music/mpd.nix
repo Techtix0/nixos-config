@@ -12,6 +12,7 @@
   config = {
 		services.mpd = {
 			enable = true;
+			user = userSettings.username;
 			musicDirectory = "/home/${userSettings.username}/Music";
 			extraConfig = ''
 				audio_output {
@@ -19,6 +20,10 @@
 					name "PipeWire output"
 				}
 			'';
+		};
+
+		systemd.services.mpd.environment = {
+			XDG_RUNTIME_DIR = "/run/user/${toString config.users.users.${userSettings.username}.uid}";
 		};
 	};
 }
