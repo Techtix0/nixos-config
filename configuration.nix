@@ -15,6 +15,7 @@
     ./apps/services/lsp # language servers
 		./apps/games # game configs
 		./style # style config 
+		./apps/utility/tmux # tmux config
   ];
 
   options = {

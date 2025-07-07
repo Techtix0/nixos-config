@@ -6,6 +6,12 @@ vim.g.mapleader = " "
 vim.cmd.set "nowrap"
 vim.cmd.set "nohlsearch"
 
+-- navigate nvim panes
+vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')
+vim.keymap.set('n', '<C-j>', ':wincmd j<CR>')
+vim.keymap.set('n', '<C-h>', ':wincmd h<CR>')
+vim.keymap.set('n', '<C-l>', ':wincmd l<CR>')
+
 -- copy to clipboard
 vim.keymap.set('v', "<leader>y", '"+y')
 
