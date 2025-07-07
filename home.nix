@@ -24,7 +24,7 @@ in {
     ./apps/media/spotify/spotify.nix # spicetify config
     ./apps/terminal/shell/zsh.nix # shell
 		./apps/utility/browsers # web browsers
-		./apps/media/music/rmpc.nix # music player
+		./apps/media/music # music player config
   ];
 
   options = {};
