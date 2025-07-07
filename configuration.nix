@@ -16,6 +16,7 @@
 		./apps/games # game configs
 		./style # style config 
 		./apps/utility/tmux # tmux config
+		./apps/media/music # music player config
   ];
 
   options = {
