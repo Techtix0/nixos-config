@@ -10,12 +10,6 @@
   options = {};
 
   config = {
-		# mpd client
-		environment.systemPackages = with pkgs; [
-			rmpc
-		];
-
-		# mpd config
 		services.mpd = {
 			enable = true;
 			musicDirectory = "/home/${userSettings.username}/Music";
