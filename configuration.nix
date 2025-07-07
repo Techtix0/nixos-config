@@ -157,6 +157,7 @@
 			godot # Game engine
 			aseprite # Pixel art tool
 			jq # command line json processor
+			protonvpn-gui # VPN
     ];
 
 		# Fonts
