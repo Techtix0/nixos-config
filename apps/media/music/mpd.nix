@@ -15,7 +15,10 @@
 		services.mpd = {
 			enable = true;
 			musicDirectory = "/home/${userSettings.username}/Music";
-			network.startWhenNeeded = true;
+			network = {
+				startWhenNeeded = true;
+				listenAddress = "127.0.0.1";
+			};
 			extraConfig = ''
 				audio_output {
 					type "pipewire"
