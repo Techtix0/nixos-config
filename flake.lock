@@ -754,15 +754,15 @@
       "locked": {
         "lastModified": 1751880110,
         "narHash": "sha256-5fQ2cetL3rTHqXe2VM3puawL/8u5j6ujBr6Gdt7Iues=",
-        "ref": "refs/heads/master",
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
         "rev": "5d7e07508ae3e5487edb1ac5a152120434f091d5",
-        "revCount": 607,
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+        "owner": "quickshell-mirror",
+        "repo": "quickshell",
+        "type": "github"
       }
     },
     "root": {

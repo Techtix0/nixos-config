@@ -25,7 +25,7 @@
 		};
 
 		quickshell = {
-			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+			url = "github:quickshell-mirror/quickshell";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
@@ -87,6 +87,7 @@
           inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
+					inputs.quickshell.packages.${systemSettings.system}.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
