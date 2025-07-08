@@ -40,6 +40,7 @@
     self,
     nixpkgs,
     home-manager,
+		quickshell,
     ...
   } @ inputs: let
     # ---- SYSTEM SETTINGS ---- #
@@ -76,6 +77,7 @@
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
+					inherit quickshell;
         };
       };
     };
@@ -87,7 +89,6 @@
           inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
-					inputs.quickshell.packages.${systemSettings.system}.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
