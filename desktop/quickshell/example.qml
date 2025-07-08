@@ -2,37 +2,28 @@ import Quickshell
 import Quickshell.Io
 import QtQuick
 
-Variants {
-	model: Quickshell.screens;
-	
-	delegate: Component {
-		PanelWindow {
-			property var modelData
+PanelWindow {
+	anchors {
+		top: true
+		left: true
+		right: true
+	}
 
-			screen: modelData
+	implicitHeight: 30
 
-			anchors {
-				top: true
-				left: true
-				right: true
-			}
-		
-			implicitHeight: 30
-		
-			Text {
-				id: clock
-				anchors.centerIn: parent
-		
-				Process {
-					command: ["date"]
-		
-					running: true
-		
-					stdout: StdioCollector {
-						onStreamFinished: clock.text = this.text
-					}
-				}
+	Text {
+		id: clock
+		anchors.centerIn: parent
+
+		Process {
+			command: ["date"]
+
+			running: true
+
+			stdout: StdioCollector {
+				onStreamFinished: clock.text = this.text
 			}
 		}
 	}
 }
+
