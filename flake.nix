@@ -77,7 +77,6 @@
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
-					inherit quickshell;
         };
       };
     };
@@ -95,6 +94,7 @@
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
+					inherit quickshell;
         };
       };
     };
