@@ -157,6 +157,8 @@
 			godot # Game engine
 			aseprite # Pixel art tool
 			jq # command line json processor
+			protonvpn-gui # VPN
+			wireguard-tools # Wireguard tools
     ];
 
 		# Fonts
@@ -197,6 +199,9 @@
 
     # Enable the OpenSSH daemon.
     # services.openssh.enable = true;
+
+		# Needed for protonVPN
+		networking.firewall.checkReversePath = false;
 
     # Open ports in the firewall.
     # networking.firewall.allowedTCPPorts = [ ... ];

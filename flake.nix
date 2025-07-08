@@ -24,10 +24,10 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-    # vesktop-nix = {
-    #   url = "github:PierreBorine/vesktop-nix";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+		quickshell = {
+			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -40,6 +40,7 @@
     self,
     nixpkgs,
     home-manager,
+		quickshell,
     ...
   } @ inputs: let
     # ---- SYSTEM SETTINGS ---- #
@@ -93,6 +94,7 @@
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
+					inherit quickshell;
         };
       };
     };
