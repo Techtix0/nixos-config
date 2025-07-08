@@ -16,6 +16,7 @@
 		./apps/games # game configs
 		./style # style config 
 		./apps/utility/tmux # tmux config
+		./desktop/quickshell # quickshell config
   ];
 
   options = {
