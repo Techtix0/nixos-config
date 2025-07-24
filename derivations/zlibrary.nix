@@ -23,11 +23,11 @@ pkgs.stdenv.mkDerivation rec {
   ];
 
 	installPhase = ''
-		runHook preInstall
+		runHook --ignore-missing="libcups.so.2" preInstall 
 
-		mkdir -p $out
+		mkdir -p $out/bin
 		dpkg -x $src $out
-		cp -r usr/share $out
+		cp -r usr $out
 		cp -r opt $out
 
 		ln -s $out/opt/Z-library/z-library $out/bin/z-library
