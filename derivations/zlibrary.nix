@@ -1,41 +1,48 @@
-{pkgs ? import <nixpkgs> {}}:
-pkgs.stdenv.mkDerivation rec {
+{
+  fetchurl,
+  qt5,
+  dpkg,
+  cups,
+  autoPatchelfHook,
+  stdenv,
+}:
+stdenv.mkDerivation rec {
   pname = "Z-library";
   version = "2.4.3";
 
-  src = pkgs.fetchurl {
+  src = fetchurl {
     url = "https://s3proxy.cdn-zlib.sk/te_public_files/soft/linux/zlibrary-setup-latest.deb";
     hash = "sha256-OywGJdVUAGxK+C14akbLzhkt/5QE6+lchPHteksOLLY=";
   };
 
-	unpackCmd = "dpkg -x $curSrc source";
+  unpackCmd = "dpkg -x $curSrc source";
 
   nativeBuildInputs = [
-    pkgs.dpkg
-		pkgs.autoPatchelfHook
-		pkgs.qt5.wrapQtAppsHook
+    dpkg
+    autoPatchelfHook
+    qt5.wrapQtAppsHook
   ];
 
-  buildInputs = with pkgs.qt5; [
+  buildInputs = with qt5; [
     qtbase
-		qtsvg
-		qtwebengine
-		pkgs.cups
+    qtsvg
+    qtwebengine
+    cups
   ];
 
-	installPhase = ''
-		runHook preInstall 
+  installPhase = ''
+    runHook preInstall
 
-		mkdir -p $out/bin
-		cp -r usr/share $out
-		cp -r opt $out
+    mkdir -p $out/bin
+    cp -r usr/share $out
+    cp -r opt $out
 
-		substituteInPlace $out/share/applications/z-library.desktop --replace-fail 'Exec=/opt/Z-Library/z-library' 'Exec=z-library'
+    substituteInPlace $out/share/applications/z-library.desktop --replace-fail 'Exec=/opt/Z-Library/z-library' 'Exec=z-library'
 
-		ln -s $out/opt/Z-Library/z-library $out/bin/z-library
+    ln -s $out/opt/Z-Library/z-library $out/bin/z-library
 
-		runHook postInstall
-	'';
+    runHook postInstall
+  '';
 
   meta = {
     description = "Z-library desktop app";
