@@ -1,5 +1,6 @@
+# stdenv, fetchurl, dpkg, autoPatchelfHook, qt5, ...
 {stdenv, fetchurl, dpkg, autoPatchelfHook, qt5, ...}:
-stdenv.stdenv.mkDerivation (finalAttrs: {
+stdenv.mkDerivation rec {
   pname = "Z-library";
   version = "2.4.3";
 
@@ -27,7 +28,7 @@ stdenv.stdenv.mkDerivation (finalAttrs: {
 
 		mkdir -p $out/bin
 		mv usr/share opt $out
-		ln -s $out/opt/gfie-${finalAttrs.version}/gfie $out/bin/gfie
+		ln -s $out/opt/zlibrary-${version}/zlibrary $out/bin/zlibrary
 
 		runHook postInstall
 	'';
@@ -36,4 +37,4 @@ stdenv.stdenv.mkDerivation (finalAttrs: {
     description = "Z-library desktop app";
     homepage = "https://1lib.sk/";
   };
-})
+}
