@@ -1,4 +1,8 @@
 {
+  lib,
+  libgcc,
+  atkmm,
+  gtk3,
   fetchurl,
   qt5,
   dpkg,
@@ -7,7 +11,7 @@
   stdenv,
 }:
 stdenv.mkDerivation rec {
-  pname = "Z-library";
+  pname = "z-library";
   version = "2.4.3";
 
   src = fetchurl {
@@ -28,6 +32,9 @@ stdenv.mkDerivation rec {
     qtsvg
     qtwebengine
     cups
+    libgcc
+    atkmm
+    gtk3
   ];
 
   installPhase = ''
@@ -47,5 +54,8 @@ stdenv.mkDerivation rec {
   meta = {
     description = "Z-library desktop app";
     homepage = "https://1lib.sk/";
+    license = lib.licenses.gpl3Only;
+    maintainers = [ lib.maintainers.Techtix0 ];
+    mainProgram = "$out/bin/z-library";
   };
 }
