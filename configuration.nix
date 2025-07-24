@@ -159,6 +159,7 @@
 			jq # command line json processor
 			protonvpn-gui # VPN
 			wireguard-tools # Wireguard tools
+			(callPackage ./derivations/zlibrary.nix { }) # Zlibrary
     ];
 
 		# Fonts
