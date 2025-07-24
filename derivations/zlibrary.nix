@@ -27,7 +27,6 @@ pkgs.stdenv.mkDerivation rec {
 		runHook preInstall 
 
 		mkdir -p $out/bin
-		dpkg -x $src $out
 		cp -r usr $out
 		cp -r opt $out
 
