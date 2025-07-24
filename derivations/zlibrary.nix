@@ -27,8 +27,10 @@ pkgs.stdenv.mkDerivation rec {
 		runHook preInstall 
 
 		mkdir -p $out/bin
-		cp -r usr $out
+		cp -r usr/share $out
 		cp -r opt $out
+
+		substituteInPlace $out/share/applications/z-library.desktop --replace-fail 'Exec=/opt/Z-Library/z-library' 'Exec=z-library'
 
 		ln -s $out/opt/Z-Library/z-library $out/bin/z-library
 
