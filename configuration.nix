@@ -16,7 +16,6 @@
 		./apps/games # game configs
 		./style # style config 
 		./apps/utility/tmux # tmux config
-		./derivations/zlibrary.nix # Zlibrary package
   ];
 
   options = {
