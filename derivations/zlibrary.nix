@@ -1,4 +1,3 @@
-# stdenv, fetchurl, dpkg, autoPatchelfHook, qt5
 {pkgs ? import <nixpkgs> {}}:
 pkgs.stdenv.mkDerivation rec {
   pname = "Z-library";
@@ -28,9 +27,10 @@ pkgs.stdenv.mkDerivation rec {
 
 		mkdir -p $out
 		dpkg -x $src $out
-		cp -r usr/* $out
+		cp -r usr/share $out
+		cp -r opt $out
 
-		ln -s "$out/share/zlibrary/zlibrary" "$out/bin/zlibrary"
+		ln -s $out/opt/Z-library/z-library $out/bin/z-library
 
 		runHook postInstall
 	'';
