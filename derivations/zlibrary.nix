@@ -20,17 +20,18 @@ pkgs.stdenv.mkDerivation rec {
     qtbase
 		qtsvg
 		qtwebengine
+		pkgs.cups
   ];
 
 	installPhase = ''
-		runHook --ignore-missing="libcups.so.2" preInstall 
+		runHook preInstall 
 
 		mkdir -p $out/bin
 		dpkg -x $src $out
 		cp -r usr $out
 		cp -r opt $out
 
-		ln -s $out/opt/Z-library/z-library $out/bin/z-library
+		ln -s $out/opt/Z-Library/z-library $out/bin/z-library
 
 		runHook postInstall
 	'';
