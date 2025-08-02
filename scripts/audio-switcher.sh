@@ -4,7 +4,7 @@
 options=$(pactl -f json list sinks | jq -r '.[] | .description')
 
 # Let the user select a description
-selection=$(echo "$options" | fuzzel -d)
+selection=$(echo "$options" | fuzzel -d --anchor="top-right" --x-margin="5" --y-margin="5" --width="30" --lines="5")
 
 # Extract the corresponding sink name
 sink_name=$(pactl -f json list sinks | jq -r --arg sink_pretty_name "$selection" '.[] | select(.description == $sink_pretty_name) | .name')
