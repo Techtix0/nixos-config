@@ -4,7 +4,7 @@
 
     settings = {
       add_newline = true;
-      format = "$username$hostname$directory$git_branch$git_status\${custom.nix}$lua$rust$nix_shell\n$cmd_duration$shlvl$character";
+      format = "$username$hostname$directory$git_branch$git_status\${custom.nix}$lua$rust$python$nix_shell\n$cmd_duration$shlvl$character";
 
       username = {
         show_always = true;
@@ -40,6 +40,11 @@
         format = "[$symbol($version )]($style)";
         symbol = " ";
       };
+
+			python = {
+				format = "[$symbol($version )]($style)";
+				symbol = " ";
+			};
 
       shlvl = {
         disabled = false;
