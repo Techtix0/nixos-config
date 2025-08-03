@@ -18,6 +18,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
+
 			-- Lua lsp
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities
@@ -52,6 +53,9 @@ return {
 					},
 				},
 			})
+
+			-- Python lsp
+			lspconfig.pylsp.setup({})
 
 			-- keybinds
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
