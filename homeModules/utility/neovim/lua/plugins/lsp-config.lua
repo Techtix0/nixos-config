@@ -14,7 +14,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		lazy = false,
-		-- For more lsps remember to install them in apps/services/lsp and import it in lsp.nix
+		-- For more lsps remember to install them in modules/services/lsp and import it in lsp.nix
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")

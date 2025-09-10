@@ -9,23 +9,20 @@
 in {
   imports = [
     # TODO - put imports in a default.nix
-    ./style/stylix.nix # Strylix settings
-    # ./apps/terminal/sh.nix # Shell scripts
-    ./apps/terminal/kitty.nix # terminal
-    ./apps/utility/fuzzel.nix # application launcher
-    ./apps/utility/ranger.nix # CLI file manager
-    # ./desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
-    ./desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
-    # ./desktop/waybar/waybar-round.nix # waybar config
-    ./desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
-    ./apps/utility/git.nix # git/github config
-    ./apps/utility/neovim/neovim.nix # neovim config
-    # ./apps/media/discord/vesktop.nix # vesktop config
-    ./apps/media/spotify/spotify.nix # spicetify config
-    ./apps/terminal/shell/zsh.nix # shell
-		./apps/utility/browsers # web browsers
-		./apps/media/music # music player config
-		./desktop/quickshell # quickshell config
+    ./homeModules/desktop/style/stylix.nix # Strylix settings
+    ./homeModules/terminal # Terminal and shell configs
+    ./homeModules/utility/fuzzel.nix # application launcher
+    ./homeModules/utility/ranger.nix # CLI file manager
+    # ./homeModules/desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
+    ./homeModules/desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
+    # ./homeModules/desktop/waybar/waybar-round.nix # waybar config
+    ./homeModules/desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
+    ./homeModules/utility/git.nix # git/github config
+    ./homeModules/utility/neovim/neovim.nix # neovim config
+    # ./homeModules/discord/vesktop.nix # vesktop config
+		./homeModules/utility/browsers # web browsers
+		./homeModules/media/music # music player config
+		./homeModules/desktop/quickshell # quickshell config
   ];
 
   options = {};
@@ -92,7 +89,7 @@ in {
     #  /etc/profiles/per-user/techtix/etc/profile.d/hm-session-vars.sh
     #
     home.sessionVariables = {
-      # EDITOR = "nvim";  # Neovim is already set as default in ./apps/neovim/neovim.nix
+      # EDITOR = "nvim";  # Neovim is already set as default in ./homeModules/neovim/neovim.nix
     };
 
     # Let Home Manager install and manage itself.

@@ -16,7 +16,7 @@
 
     settings = {
       # Waybar startup/refresh script
-      exec-once = "~/.dotfiles/desktop/waybar/startup.sh";
+      exec-once = "~/.dotfiles/homeModules/desktop/waybar/startup.sh";
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
       monitor = [
@@ -72,9 +72,9 @@
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, F, fullscreen"
-        "$mainMod SHIFT, S, exec, bash ~/.dotfiles/desktop/wm/hyprland/screenshot.sh"
+        "$mainMod SHIFT, S, exec, bash ~/.dotfiles/homeModules/desktop/wm/hyprland/screenshot.sh"
         "ALT, space, exec, $menu"
-        "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/desktop/waybar/startup.sh"
+        "$mainMod CTRL SHIFT, B, exec, bash ~/.dotfiles/homeModules/desktop/waybar/startup.sh"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left, movefocus, l"
