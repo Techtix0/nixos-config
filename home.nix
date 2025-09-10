@@ -10,8 +10,7 @@ in {
   imports = [
     # TODO - put imports in a default.nix
     ./style/stylix.nix # Strylix settings
-    # ./apps/terminal/sh.nix # Shell scripts
-    ./apps/terminal/kitty.nix # terminal
+    ./homeModules/terminal # Terminal and shell configs
     ./homeModules/utility/fuzzel.nix # application launcher
     ./homeModules/utility/ranger.nix # CLI file manager
     # ./desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
@@ -21,7 +20,6 @@ in {
     ./homeModules/utility/git.nix # git/github config
     ./homeModules/utility/neovim/neovim.nix # neovim config
     # ./homeModules/discord/vesktop.nix # vesktop config
-    ./apps/terminal/shell/zsh.nix # shell
 		./homeModules/utility/browsers # web browsers
 		./homeModules/media/music # music player config
 		./desktop/quickshell # quickshell config
