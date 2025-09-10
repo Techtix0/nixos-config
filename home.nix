@@ -9,7 +9,7 @@
 in {
   imports = [
     # TODO - put imports in a default.nix
-    ./style/stylix.nix # Strylix settings
+    ./homeModules/desktop/style/stylix.nix # Strylix settings
     ./homeModules/terminal # Terminal and shell configs
     ./homeModules/utility/fuzzel.nix # application launcher
     ./homeModules/utility/ranger.nix # CLI file manager
