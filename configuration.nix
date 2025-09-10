@@ -12,7 +12,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
-    ./apps/services/lsp # language servers
+    ./modules/services/lsp # language servers
 		./modules/games # game configs
 		./style # style config 
 		./apps/utility/tmux # tmux config
