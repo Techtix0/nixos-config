@@ -14,7 +14,7 @@
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./modules/services/lsp # language servers
 		./modules/games # game configs
-		./style # style config 
+		./modules/openrgb/openrgb.nix # openrgb config 
 		./modules/tmux # tmux config
   ];
 
