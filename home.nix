@@ -13,16 +13,16 @@ in {
     ./homeModules/terminal # Terminal and shell configs
     ./homeModules/utility/fuzzel.nix # application launcher
     ./homeModules/utility/ranger.nix # CLI file manager
-    # ./desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
-    ./desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
-    # ./desktop/waybar/waybar-round.nix # waybar config
-    ./desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
+    # ./homeModules/desktop/wm/hyprland/hyprland-round.nix # Window manager (also includes imports for hyprlock and hyprpaper)
+    ./homeModules/desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
+    # ./homeModules/desktop/waybar/waybar-round.nix # waybar config
+    ./homeModules/desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
     ./homeModules/utility/git.nix # git/github config
     ./homeModules/utility/neovim/neovim.nix # neovim config
     # ./homeModules/discord/vesktop.nix # vesktop config
 		./homeModules/utility/browsers # web browsers
 		./homeModules/media/music # music player config
-		./desktop/quickshell # quickshell config
+		./homeModules/desktop/quickshell # quickshell config
   ];
 
   options = {};
