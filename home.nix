@@ -23,7 +23,7 @@ in {
     # ./homeModules/discord/vesktop.nix # vesktop config
     ./apps/terminal/shell/zsh.nix # shell
 		./apps/utility/browsers # web browsers
-		./homeModules/music # music player config
+		./homeModules/media/music # music player config
 		./desktop/quickshell # quickshell config
   ];
 
