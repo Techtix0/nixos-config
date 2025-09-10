@@ -89,7 +89,7 @@ in {
     #  /etc/profiles/per-user/techtix/etc/profile.d/hm-session-vars.sh
     #
     home.sessionVariables = {
-      # EDITOR = "nvim";  # Neovim is already set as default in ./apps/neovim/neovim.nix
+      # EDITOR = "nvim";  # Neovim is already set as default in ./homeModules/neovim/neovim.nix
     };
 
     # Let Home Manager install and manage itself.
