@@ -8,7 +8,6 @@
 }: let
 in {
   imports = [
-    # TODO - put imports in a default.nix
     ./homeModules/desktop/style/stylix.nix # Strylix settings
     ./homeModules/terminal # Terminal and shell configs
     ./homeModules/utility/fuzzel.nix # application launcher
