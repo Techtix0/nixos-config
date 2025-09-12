@@ -69,7 +69,7 @@
     nixosConfigurations = {
       nixos-desktop = lib.nixosSystem {
         modules = [
-          ./configuration.nix
+          ./hosts/nixos-desktop/configuration.nix
           inputs.stylix.nixosModules.stylix
 					inputs.sops-nix.nixosModules.sops
 					{networking.hostName = "nixos-desktop";}
