@@ -12,10 +12,10 @@
 }: {
   imports = [
     ./hardware-configuration.nix # Include the results of the hardware scan.
-    ./modules/services/lsp # language servers
-		./modules/games # game configs
-		./modules/openrgb/openrgb.nix # openrgb config 
-		./modules/tmux # tmux config
+    ../../modules/services/lsp # language servers
+		../../modules/games # game configs
+		../../modules/openrgb/openrgb.nix # openrgb config 
+		../../modules/tmux # tmux config
   ];
 
   options = {
