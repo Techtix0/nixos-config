@@ -101,7 +101,7 @@
     homeConfigurations = {
       "techtix@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
         modules = [
-          ./home.nix
+          ./hosts/nixos-desktop/home.nix
           inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
