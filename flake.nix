@@ -82,10 +82,42 @@
       };
     };
 
+    nixosConfigurations = {
+      nixos-laptop = lib.nixosSystem {
+        modules = [
+          ./hosts/nixos-laptop/configuration.nix
+          inputs.stylix.nixosModules.stylix
+					inputs.sops-nix.nixosModules.sops
+					{networking.hostName = "nixos-laptop";}
+        ];
+        specialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+        };
+      };
+    };
+
     homeConfigurations = {
-      techtix = home-manager.lib.homeManagerConfiguration {
+      "techtix@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
         modules = [
           ./home.nix
+          inputs.stylix.homeModules.stylix
+					inputs.sops-nix.homeManagerModules.sops
+					inputs.nur.modules.homeManager.default
+        ];
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+					inherit quickshell;
+        };
+			};
+
+      "techtix@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
+        modules = [
+          ./hosts/nixos-laptop/home.nix
           inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
