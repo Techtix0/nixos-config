@@ -46,7 +46,7 @@
     # ---- SYSTEM SETTINGS ---- #
     systemSettings = {
       system = "x86_64-linux"; # system arch
-      hostname = "nixos"; # hostname
+      # hostname = "nixos-desktop"; # hostname
       timezone = "Europe/Brussels"; # select timezone
       locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
@@ -67,11 +67,12 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      nixos-desktop = lib.nixosSystem {
         modules = [
           ./configuration.nix
           inputs.stylix.nixosModules.stylix
 					inputs.sops-nix.nixosModules.sops
+					{networking.hostName = "nixos-desktop";}
         ];
         specialArgs = {
           inherit systemSettings;
