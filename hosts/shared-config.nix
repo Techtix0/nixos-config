@@ -2,8 +2,8 @@
   config,
   pkgs,
   lib,
-	systemSettings,
-	userSettings,
+  systemSettings,
+  userSettings,
   ...
 }: {
   imports = [];
@@ -11,6 +11,19 @@
   options = {};
 
   config = {
+    # List packages installed in system profile. To search, run:
+    # $ nix search wget
+    environment.systemPackages = with pkgs; [
+      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      git
+      age # encryption tool
+      sops # secret manaing tool
+      onefetch # git information fetch tool like fastfetch/neofetch
+      zip
+      unzip # compression tools
+      jq # command line json processor (needed for a sound switching script)
+    ];
+
     # Secret management
     sops.defaultSopsFile = ./secrets/secrets.yaml;
     sops.defaultSopsFormat = "yaml";
@@ -79,27 +92,14 @@
       packages = [];
     };
 
-		# Allow unfree packages
-  	nixpkgs.config.allowUnfree = true;
+    # Allow unfree packages
+    nixpkgs.config.allowUnfree = true;
 
-		# List packages installed in system profile. To search, run:
-  	# $ nix search wget
-  	environment.systemPackages = with pkgs; [
-  	  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  	  git
-			age # encryption tool
-			sops # secret manaing tool
-			onefetch # git information fetch tool like fastfetch/neofetch
-			zip 
-			unzip # compression tools
-			jq # command line json processor (needed for a sound switching script)
-  	];
-
-		# Fonts
-		fonts.packages = with pkgs; [
-			nerd-fonts.fira-mono
-			nerd-fonts.symbols-only
-		];
+    # Fonts
+    fonts.packages = with pkgs; [
+      nerd-fonts.fira-mono
+      nerd-fonts.symbols-only
+    ];
 
     # Removes unwanted KDE packages
     environment.plasma6.excludePackages = with pkgs.kdePackages; [
@@ -152,5 +152,8 @@
         persistencedSha256 = lib.fakeSha256;
       };
     };
+
+    # Enable flakes
+    nix.settings.experimental-features = ["nix-command" "flakes"];
   };
 }
