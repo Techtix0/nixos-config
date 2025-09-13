@@ -31,6 +31,7 @@
           "wireplumber"
           "temperature"
           "network"
+					"battery"
           "custom/poweroff"
         ];
 
@@ -70,6 +71,11 @@
           };
           separate-outputs = true;
         };
+
+				"battery" = {
+					format = " [ {icon} {capacity}% ] ";
+					format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"]; 
+				};
 
         "custom/poweroff" = {
           format = "";
