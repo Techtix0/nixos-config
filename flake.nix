@@ -13,12 +13,6 @@
 
 		sops-nix.url = "github:Mic92/sops-nix";
 
-    # hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
-
     stylix = {
 			url = "github:danth/stylix/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -51,6 +45,7 @@
       locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
       monitor2 = "DP-2"; # secondary monitor
+			laptop-monitor = "eDP-1"; # laptop display
     };
 
     # ----- USER SETTINGS ----- #

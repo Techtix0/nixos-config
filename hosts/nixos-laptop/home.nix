@@ -11,6 +11,8 @@
     ../../homeModules/terminal # Terminal and shell configs
     ../../homeModules/utility/fuzzel.nix # application launcher
     ../../homeModules/utility/neovim/neovim.nix # neovim config
+    ../../homeModules/desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
+    ../../homeModules/desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
   ];
 
   options = {};

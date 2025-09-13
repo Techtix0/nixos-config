@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
       vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       git
+			clang # C compiler
       age # encryption tool
       sops # secret manaing tool
       onefetch # git information fetch tool like fastfetch/neofetch
