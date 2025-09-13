@@ -11,6 +11,10 @@
       ../../modules/tmux
     ];
 
+	# Shell
+	users.defaultUserShell = pkgs.zsh;
+	programs.zsh.enable = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
