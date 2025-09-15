@@ -26,7 +26,18 @@
     # Enable hyprland
     programs.hyprland.enable = true;
 
-		networking.networkmanager.enable = true;
+		# Networking configuration
+		networking = {
+			wireless.iwd = {
+				enable = true;
+				settings = {
+					IPv6.enabled = true;
+					Settings.Autoconnect = true;
+				};
+			};
+			networkmanager.enable = true;
+			networkmanager.wifi.backend = "iwd";
+		};
 
     # Enable the X11 windowing system.
     # You can disable this if you're only using the Wayland session.

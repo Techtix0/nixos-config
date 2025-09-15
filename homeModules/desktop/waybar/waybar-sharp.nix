@@ -101,7 +101,7 @@
 
         "network" = {
           format = " [   ] ";
-          format-disconnected = "󱘖 ";
+          format-disconnected = " [ 󱘖  ] ";
           tooltip-format-ethernet = "{ifname} via {gwaddr}";
           tooltip-format-disconnected = "disconnected";
         };
