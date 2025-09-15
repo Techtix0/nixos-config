@@ -24,6 +24,10 @@
 			iwgtk # Network managment GUI
     ];
 
+		# Touchpad behavior
+		# For hyprland specifically, this has to be set in its own configuration
+		services.libinput.touchpad.naturalScrolling = true;
+
     # Enable hyprland
     programs.hyprland.enable = true;
 
