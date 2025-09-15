@@ -9,10 +9,10 @@
   imports = [
     ../../homeModules/desktop/style/stylix.nix # Strylix settings
     ../../homeModules/terminal # Terminal and shell configs
-    ../../homeModules/utility/fuzzel.nix # application launcher
-    ../../homeModules/utility/neovim/neovim.nix # neovim config
+    ../../homeModules/utility/fuzzel.nix # Application launcher
+    ../../homeModules/utility/neovim/neovim.nix # Neovim config
     ../../homeModules/desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
-    ../../homeModules/desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
+    ../../homeModules/desktop/waybar/waybar-sharp.nix # Waybar config, sharp corners
   ];
 
   options = {};
