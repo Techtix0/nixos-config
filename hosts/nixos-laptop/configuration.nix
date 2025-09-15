@@ -20,6 +20,7 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
 			firefox # Browser
+			teams-for-linux # Microsoft teams
     ];
 
     # Enable hyprland
