@@ -102,10 +102,12 @@
 				"$mainMod ALT SHIFT, down, movetoworkspacesilent, -2"
       ];
 
-      # Volume controls
+      # Volume and brightness controls
       bindel = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+				", XF86MonBrightnessUp, exec, brightnessctl s +5%"
+				", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
       ];
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"

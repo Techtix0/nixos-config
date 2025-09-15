@@ -22,6 +22,7 @@
 			firefox # Browser
 			teams-for-linux # Microsoft teams
 			iwgtk # Network managment GUI
+			brightnessctl # Monitor brightness control
     ];
 
 		# Touchpad behavior
