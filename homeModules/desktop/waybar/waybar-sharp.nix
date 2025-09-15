@@ -28,6 +28,7 @@
         modules-right = [
           ""
           "privacy"
+					"backlight"
           "wireplumber"
           "temperature"
           "network"
@@ -89,8 +90,12 @@
           format-icons = ["󰕾"];
 					on-click = "bash " + userSettings.dotfilesDir + "/scripts/audio-switcher.sh";
           tooltip = true;
-
         };
+
+				"backlight" = {
+					format = " [ {icon} {percent}% ] ";
+					format-icons = ["󰃞" "󰃟" "󰃠"];
+				};
 
         "temperature" = {
           format = " [  {temperatureC}°C ] ";
