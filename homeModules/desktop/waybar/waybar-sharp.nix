@@ -102,6 +102,7 @@
         "network" = {
           format = " [   ] ";
           format-disconnected = " [ 󱘖  ] ";
+					on-click = "iwgtk";
           tooltip-format-ethernet = "{ifname} via {gwaddr}";
           tooltip-format-disconnected = "disconnected";
         };

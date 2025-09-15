@@ -21,6 +21,7 @@
     environment.systemPackages = with pkgs; [
 			firefox # Browser
 			teams-for-linux # Microsoft teams
+			iwgtk # Network managment GUI
     ];
 
     # Enable hyprland
