@@ -55,10 +55,8 @@ in {
       fastfetch #	system information
       feh #	image viewer
       grim #	screenshot tool for wayland
-      hyprlang #	config language for hyprland
       killall #	kill all instances of a process
       obsidian #	note taking app
-      todo #	REMOVE
       slurp #	get coordinates for selected location on screen (used with grim)
       wlogout #	gui start menu
       ani-cli # watch anime from the cli
