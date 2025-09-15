@@ -23,6 +23,7 @@
       monitor = [
         "${systemSettings.monitor1}, 1920x1080@144, 0x0, 1"
         "${systemSettings.monitor2}, 1920x1080@144, 1920x0, 1"
+				"${systemSettings.laptop-monitor}, 2256x1504@60, 0x0, 1.600000"
       ];
 
       # WORKSPACES
@@ -49,9 +50,7 @@
       "$opacity" = 0.9;
       decoration = {
         rounding = 0;
-        # active_opacity = "$opacity";
         inactive_opacity = "$opacity";
-        # fullscreen_opacity = "$opacity";
         blur = {
           enabled = true;
           size = 8;
