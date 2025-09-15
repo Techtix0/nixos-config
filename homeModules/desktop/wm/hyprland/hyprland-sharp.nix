@@ -98,6 +98,8 @@
         # Workspace navigation
         "$mainMod ALT, right, workspace, +2"
         "$mainMod ALT, left, workspace, -2"
+				"$mainMod ALT SHIFT, up, movetoworkspacesilent, +2"
+				"$mainMod ALT SHIFT, down, movetoworkspacesilent, -2"
       ];
 
       # Volume controls
