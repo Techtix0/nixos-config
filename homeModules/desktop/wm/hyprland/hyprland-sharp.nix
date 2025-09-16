@@ -9,6 +9,7 @@
   imports = [
     ./hyprpaper.nix
     ./hyprlock.nix
+		./hypridle.nix
     ./wl-clipboard.nix
   ];
 
@@ -121,4 +122,8 @@
       ];
     };
   };
+
+	home.sessionVariables = {
+		NIXOS_OZONE_WL = 1;
+	};
 }
