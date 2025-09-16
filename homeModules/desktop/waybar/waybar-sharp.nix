@@ -1,4 +1,5 @@
-{lib, userSettings, ...}: {
+{lib, pkgs, userSettings, ...}: {
+
   programs.waybar = {
     enable = true;
     systemd = {
@@ -118,4 +119,9 @@
       }
     ];
   };
+
+	home.packages = with pkgs; [
+		wlogout # GUI logout options
+	];
+
 }

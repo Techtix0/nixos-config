@@ -53,7 +53,6 @@
       obsidian #	note taking app
       todo #	REMOVE
       slurp #	get coordinates for selected location on screen (used with grim)
-      wlogout #	gui start menu
       ani-cli # watch anime from the cli
     ];
 

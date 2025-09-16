@@ -58,7 +58,6 @@ in {
       killall #	kill all instances of a process
       obsidian #	note taking app
       slurp #	get coordinates for selected location on screen (used with grim)
-      wlogout #	gui start menu
       ani-cli # watch anime from the cli
     ];
 
