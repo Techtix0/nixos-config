@@ -23,6 +23,7 @@
 			teams-for-linux # Microsoft teams
 			iwgtk # Network managment GUI
 			brightnessctl # Monitor brightness control
+			vesktop # Discord wrapper
     ];
 
 		# Touchpad behavior
