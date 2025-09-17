@@ -37,6 +37,7 @@
       "$terminal" = "kitty";
       "$fileManager" = "dolphin";
       "$menu" = "fuzzel";
+			"$browser" = "firefox";
 
       general = {
         gaps_in = 4;
@@ -73,6 +74,7 @@
         "$mainMod, P, pseudo,"
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
+        "$mainMod, W, exec, $browser"
         "$mainMod, F, fullscreen"
         "$mainMod SHIFT, S, exec, bash ${userSettings.dotfilesDir}/homeModules/desktop/wm/hyprland/screenshot.sh"
         "ALT, space, exec, $menu"
