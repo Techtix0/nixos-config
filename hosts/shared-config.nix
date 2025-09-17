@@ -23,6 +23,7 @@
       zip
       unzip # compression tools
       jq # command line json processor (needed for a sound switching script)
+			xfce.thunar # File explorer
     ];
 
     # Secret management

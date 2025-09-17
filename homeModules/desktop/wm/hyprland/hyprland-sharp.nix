@@ -35,7 +35,7 @@
 
       # Set programs that you use
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "thunar";
       "$menu" = "fuzzel";
 			"$browser" = "firefox";
 
