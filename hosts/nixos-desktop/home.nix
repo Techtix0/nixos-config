@@ -25,6 +25,10 @@ in {
   options = {};
 
   config = {
+		# IMPORTANT: turn off hypridle since desktop does not have swap space so suspend doesn't work properly
+		# hypridle is imported in the hyprland-sharp.nix module
+		services.hypridle.enable = lib.mkForce false;
+
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
     home.username = userSettings.username;
