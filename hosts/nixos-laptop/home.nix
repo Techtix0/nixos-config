@@ -12,6 +12,7 @@
     ../../homeModules/utility/fuzzel.nix # Application launcher
     ../../homeModules/utility/neovim/neovim.nix # Neovim config
     ../../homeModules/desktop/wm/hyprland/hyprland-sharp.nix # Window manager, sharp corners
+		../../homeModules/desktop/wm/hyprland/hypridle.nix # Screen timeout
     ../../homeModules/desktop/waybar/waybar-sharp.nix # Waybar config, sharp corners
   ];
 

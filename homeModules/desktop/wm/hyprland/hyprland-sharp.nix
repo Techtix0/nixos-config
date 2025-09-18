@@ -9,7 +9,6 @@
   imports = [
     ./hyprpaper.nix
     ./hyprlock.nix
-		./hypridle.nix
     ./wl-clipboard.nix
   ];
 
