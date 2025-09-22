@@ -10,7 +10,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../shared-config.nix # common configurations
-    ../../modules/tmux
+    ../../modules/tmux # Terminal multiplexer
+		../../modules/services/lsp/nixd.nix # Nix lsp and formatter
   ];
 
 	options = {};
