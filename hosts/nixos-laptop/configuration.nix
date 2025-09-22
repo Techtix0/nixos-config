@@ -12,6 +12,7 @@
     ../shared-config.nix # common configurations
     ../../modules/tmux # Terminal multiplexer
 		../../modules/services/lsp/nixd.nix # Nix lsp and formatter
+		../../modules/utility/virtualbox.nix # PC emulator
   ];
 
 	options = {};
