@@ -24,6 +24,7 @@
 			iwgtk # Network managment GUI
 			brightnessctl # Monitor brightness control
 			vesktop # Discord wrapper
+			vscodium # code editor
     ];
 
 		# Touchpad behavior
