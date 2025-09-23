@@ -27,6 +27,7 @@
 			brightnessctl # Monitor brightness control
 			vesktop # Discord wrapper
 			vscodium # code editor
+			pw3270 # 3270 emulator
     ];
 
 		# Touchpad behavior
