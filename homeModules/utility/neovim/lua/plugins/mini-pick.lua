@@ -5,7 +5,7 @@ return {
 	dependencies = {"nvim-tree/nvim-web-devicons"},
 
 	config = function() 
-		require('mini.pick').setup({
+		require("mini.pick").setup({
 			mappings = {
 				caret_left = "<left>",
 				caret_right = "<right>",
