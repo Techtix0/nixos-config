@@ -1,3 +1,4 @@
+-- popup menus for finding, filtering and picking
 return {
 	{
 		'nvim-telescope/telescope.nvim',

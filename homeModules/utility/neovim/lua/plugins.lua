@@ -1,5 +1,5 @@
 -- Plugins
 return {
-	"nvim-neotest/nvim-nio",
-	"vadimcn/codelldb"
+	"nvim-neotest/nvim-nio", -- Async IO library
+	"vadimcn/codelldb" -- Debugger extension
 }

@@ -1,3 +1,4 @@
+-- Seemlessly switch between windows in tmux while using nvim
 return {
 	"christoomey/vim-tmux-navigator",
 	vim.keymap.set('n', '<C-h>', ':TmuxNavigateLeft<CR>'),

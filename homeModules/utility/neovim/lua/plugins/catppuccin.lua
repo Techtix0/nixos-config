@@ -1,3 +1,4 @@
+-- Color scheme
 return {
 	"catppuccin/nvim",
 	lazy = false,

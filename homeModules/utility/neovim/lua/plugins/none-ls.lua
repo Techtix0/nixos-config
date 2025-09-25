@@ -1,3 +1,4 @@
+-- Inject LSP diagnostics
 return {
 	"nvimtools/none-ls.nvim",
 	config = function()
