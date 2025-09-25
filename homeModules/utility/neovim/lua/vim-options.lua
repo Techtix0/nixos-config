@@ -1,11 +1,15 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 vim.opt.tabstop = 2
 vim.opt.swapfile = false
 vim.opt.shiftwidth = 2
 vim.opt.hlsearch = false
 vim.g.mapleader = " "
+
+-- prevent the built-in vim.lsp.completion autotrigger from selecting the first item
+vim.opt.completeopt = { "menuone", "noselect", "popup" }
 
 -- navigate nvim panes
 vim.keymap.set('n', '<C-k>', ':wincmd k<CR>')

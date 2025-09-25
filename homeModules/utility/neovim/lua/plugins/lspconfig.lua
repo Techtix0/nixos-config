@@ -1,33 +1,42 @@
 -- LSP configuration
 return {
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup()
-		end
-	},
-	{
-		"neovim/nvim-lspconfig",
-		lazy = false,
+	"neovim/nvim-lspconfig",
+	lazy = false,
 
-		-- For more lsps remember to install them in modules/services/lsp and import it in lsp.nix
-		config = function()
-			-- local lspconfig = require("lspconfig")
+	-- For more LSPs remember to install them in modules/services/lsp and import it in lsp.nix
+	config = function()
+		local lspconfig = require("lspconfig")
 
-			vim.lsp.enable({"lua_ls"})
+		-- Lua lsp
+		lspconfig.lua_ls.setup({})
 
-			-- keybinds
-			vim.keymap.set("i", "<C-.>", vim.lsp.buf.hover)
-			vim.keymap.set("n", "gd", vim.lsp.buf.definition)
-			vim.keymap.set("n", "<leader>ac", vim.lsp.buf.code_action)
-			vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
-		end
-	}
+		-- Python lsp
+		lspconfig.pylsp.setup({})
+
+		-- Nix lsp
+		lspconfig.nixd.setup({
+			cmd = { "nixd" },
+			settings = {
+				formatting = {
+					command = { "alejandra" },
+				},
+			},
+		})
+
+		-- Rust lsp
+		lspconfig.rust_analyzer.setup({
+			cmd = { "rust-analyzer" },
+			settings = {
+				formatting = {
+					command = { "rustfmt" },
+				},
+			},
+		})
+
+		-- keybinds
+		vim.keymap.set("i", "K", vim.lsp.buf.hover)
+		vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition)
+		vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format)
+	end
 }
-
