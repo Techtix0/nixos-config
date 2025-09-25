@@ -8,10 +8,9 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-		# syntaxHighlighting.enable = true;
 		autosuggestion.enable = true;
 
-    initContent = "tabs -2\n";
+    initContent = "tabs -2\nexport TERM=xterm-256color";
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake " + userSettings.dotfilesDir;
