@@ -6,6 +6,8 @@ vim.opt.tabstop = 2
 vim.opt.swapfile = false
 vim.opt.shiftwidth = 2
 vim.opt.hlsearch = false
+vim.opt.winborder = "single"
+
 vim.g.mapleader = " "
 
 -- prevent the built-in vim.lsp.completion autotrigger from selecting the first item

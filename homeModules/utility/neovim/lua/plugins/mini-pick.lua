@@ -1,10 +1,10 @@
 -- Picker for things such as files and live grep
 return {
-	"nvim-mini/mini.nvim", 
+	"nvim-mini/mini.nvim",
 	version = "*",
-	dependencies = {"nvim-tree/nvim-web-devicons"},
+	dependencies = { "nvim-tree/nvim-web-devicons" },
 
-	config = function() 
+	config = function()
 		require("mini.pick").setup({
 			mappings = {
 				caret_left = "<left>",
@@ -22,6 +22,6 @@ return {
 			}
 		})
 		vim.keymap.set("n", "<C-p>", ":Pick files<CR>")
-		vim.keymap.set("n", "<C-p>", ":Pick files<CR>")
+		vim.keymap.set("n", "<C-h>", ":Pick help<CR>")
 	end
 }
