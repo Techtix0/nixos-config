@@ -8,6 +8,8 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
+		# syntaxHighlighting.enable = true;
+		autosuggestion.enable = true;
 
     initContent = "tabs -2\n";
 
