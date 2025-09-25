@@ -2,6 +2,7 @@
 return {
 	"nvim-mini/mini.nvim", 
 	version = "*",
+	dependencies = {"nvim-tree/nvim-web-devicons"},
 
 	config = function() 
 		require('mini.pick').setup({
@@ -20,6 +21,7 @@ return {
 				move_up = "<C-k>",
 			}
 		})
+		vim.keymap.set("n", "<C-p>", ":Pick files<CR>")
 		vim.keymap.set("n", "<C-p>", ":Pick files<CR>")
 	end
 }
