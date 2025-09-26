@@ -22,6 +22,5 @@ return {
 			}
 		})
 		vim.keymap.set("n", "<C-p>", ":Pick files<CR>")
-		vim.keymap.set("n", "<C-h>", ":Pick help<CR>")
 	end
 }
