@@ -7,6 +7,7 @@ vim.opt.swapfile = false
 vim.opt.shiftwidth = 2
 vim.opt.hlsearch = false
 vim.opt.winborder = "single"
+vim.opt.ignorecase = true
 
 vim.g.mapleader = " "
 
