@@ -15,10 +15,11 @@ return {
 
 		-- Nix lsp
 		lspconfig.nixd.setup({
-			cmd = { "nixd" },
 			settings = {
-				formatting = {
-					command = { "alejandra" },
+				nixd = {
+					formatting = {
+						command = { "alejandra" },
+					},
 				},
 			},
 		})
@@ -32,6 +33,9 @@ return {
 				},
 			},
 		})
+
+		-- Html lsp
+		lspconfig.html.setup({})
 
 		-- keybinds
 		vim.keymap.set("n", "K", vim.lsp.buf.hover)
