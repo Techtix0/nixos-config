@@ -19,6 +19,6 @@ in {
 
   config = {
     nix.settings = aagl.nixConfig; # Set up Cachix
-    programs.anime-games-launcher.enable = true;
+    programs.anime-game-launcher.enable = true;
   };
 }
