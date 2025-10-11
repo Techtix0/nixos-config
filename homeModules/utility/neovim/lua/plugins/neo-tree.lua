@@ -1,4 +1,3 @@
--- File system popout
 return {
 	"nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -18,3 +17,4 @@ return {
 		vim.keymap.set("n", "<C-b>", ":Neotree filesystem reveal left<CR>")
 	end
 }
+
