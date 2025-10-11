@@ -4,7 +4,7 @@
     autoEnable = true;
     # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-frappe.yaml";
-    image = ../../../assets/wallpapers/goldenglow-wallpaper.png; # this doesn't do anything if the hyprpaper module is enabled but is required to be set
+    image = ../../../assets/wallpapers/nixos-wallpaper.png; # this doesn't do anything if the hyprpaper module is enabled but is required to be set
 
     cursor = {
       package = pkgs.bibata-cursors;
@@ -30,6 +30,9 @@
       };
     };
   };
+
+	# Required for stylix to target tmux
+	programs.tmux.enable = true;
 }
 # --Themes-- https://tinted-theming.github.io/base16-gallery/
 

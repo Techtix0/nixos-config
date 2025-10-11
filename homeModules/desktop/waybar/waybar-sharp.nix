@@ -1,4 +1,5 @@
-{lib, userSettings, ...}: {
+{lib, pkgs, userSettings, ...}: {
+
   programs.waybar = {
     enable = true;
     systemd = {
@@ -28,9 +29,11 @@
         modules-right = [
           ""
           "privacy"
+					"backlight"
           "wireplumber"
           "temperature"
           "network"
+					"battery"
           "custom/poweroff"
         ];
 
@@ -71,6 +74,11 @@
           separate-outputs = true;
         };
 
+				"battery" = {
+					format = " [ {icon} {capacity}% ] ";
+					format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"]; 
+				};
+
         "custom/poweroff" = {
           format = "";
           on-click = "wlogout";
@@ -83,8 +91,12 @@
           format-icons = ["󰕾"];
 					on-click = "bash " + userSettings.dotfilesDir + "/scripts/audio-switcher.sh";
           tooltip = true;
-
         };
+
+				"backlight" = {
+					format = " [ {icon} {percent}% ] ";
+					format-icons = ["󰃞" "󰃟" "󰃠"];
+				};
 
         "temperature" = {
           format = " [  {temperatureC}°C ] ";
@@ -95,7 +107,8 @@
 
         "network" = {
           format = " [   ] ";
-          format-disconnected = "󱘖 ";
+          format-disconnected = " [ 󱘖  ] ";
+					on-click = "iwgtk";
           tooltip-format-ethernet = "{ifname} via {gwaddr}";
           tooltip-format-disconnected = "disconnected";
         };
@@ -106,4 +119,9 @@
       }
     ];
   };
+
+	home.packages = with pkgs; [
+		wlogout # GUI logout options
+	];
+
 }

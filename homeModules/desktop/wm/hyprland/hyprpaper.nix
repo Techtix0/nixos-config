@@ -9,13 +9,14 @@
     enable = true;
     settings = {
       preload = [
-        "~/.dotfiles/assets/wallpapers/goldenglow-wallpaper.png"
+        "~/.dotfiles/assets/wallpapers/nixos-wallpaper.png"
         "~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
       ];
 
       wallpaper = [
         "${systemSettings.monitor1}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
         "${systemSettings.monitor2}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
+        "${systemSettings.laptop-monitor}, ~/.dotfiles/assets/wallpapers/nixos-wallpaper.png"
       ];
     };
   };

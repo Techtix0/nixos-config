@@ -8,7 +8,7 @@
 }: {
   imports = [
     ./hyprpaper.nix
-    # ./hyprlock.nix
+    ./hyprlock.nix
     ./wl-clipboard.nix
   ];
 
@@ -23,6 +23,7 @@
       monitor = [
         "${systemSettings.monitor1}, 1920x1080@144, 0x0, 1"
         "${systemSettings.monitor2}, 1920x1080@144, 1920x0, 1"
+				"${systemSettings.laptop-monitor}, 2256x1504@60, 0x0, 1.600000"
       ];
 
       # WORKSPACES
@@ -33,8 +34,9 @@
 
       # Set programs that you use
       "$terminal" = "kitty";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "thunar";
       "$menu" = "fuzzel";
+			"$browser" = "firefox";
 
       general = {
         gaps_in = 4;
@@ -49,9 +51,7 @@
       "$opacity" = 0.9;
       decoration = {
         rounding = 0;
-        # active_opacity = "$opacity";
         inactive_opacity = "$opacity";
-        # fullscreen_opacity = "$opacity";
         blur = {
           enabled = true;
           size = 8;
@@ -61,6 +61,7 @@
       input = {
         sensitivity = -0.5;
         force_no_accel = true;
+				touchpad.natural_scroll = true;
       };
 
       # KEYBINDINGS
@@ -72,6 +73,7 @@
         "$mainMod, P, pseudo,"
         "$mainMod, T, exec, $terminal"
         "$mainMod, E, exec, $fileManager"
+        "$mainMod, W, exec, $browser"
         "$mainMod, F, fullscreen"
         "$mainMod SHIFT, S, exec, bash ${userSettings.dotfilesDir}/homeModules/desktop/wm/hyprland/screenshot.sh"
         "ALT, space, exec, $menu"
@@ -98,12 +100,16 @@
         # Workspace navigation
         "$mainMod ALT, right, workspace, +2"
         "$mainMod ALT, left, workspace, -2"
+				"$mainMod ALT SHIFT, up, movetoworkspacesilent, +2"
+				"$mainMod ALT SHIFT, down, movetoworkspacesilent, -2"
       ];
 
-      # Volume controls
+      # Volume and brightness controls
       bindel = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+				", XF86MonBrightnessUp, exec, brightnessctl s +5%"
+				", XF86MonBrightnessDown, exec, brightnessctl s 5%-"
       ];
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -117,4 +123,8 @@
       ];
     };
   };
+
+	home.sessionVariables = {
+		NIXOS_OZONE_WL = 1;
+	};
 }

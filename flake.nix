@@ -13,12 +13,6 @@
 
 		sops-nix.url = "github:Mic92/sops-nix";
 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     stylix = {
 			url = "github:danth/stylix/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -46,11 +40,12 @@
     # ---- SYSTEM SETTINGS ---- #
     systemSettings = {
       system = "x86_64-linux"; # system arch
-      hostname = "nixos"; # hostname
+      # hostname = "nixos-desktop"; # hostname
       timezone = "Europe/Brussels"; # select timezone
       locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
       monitor2 = "DP-2"; # secondary monitor
+			laptop-monitor = "eDP-1"; # laptop display
     };
 
     # ----- USER SETTINGS ----- #
@@ -67,11 +62,28 @@
     pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations = {
-      nixos = lib.nixosSystem {
+      nixos-desktop = lib.nixosSystem {
         modules = [
-          ./configuration.nix
+          ./hosts/nixos-desktop/configuration.nix
           inputs.stylix.nixosModules.stylix
 					inputs.sops-nix.nixosModules.sops
+					{networking.hostName = "nixos-desktop";}
+        ];
+        specialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+        };
+      };
+    };
+
+    nixosConfigurations = {
+      nixos-laptop = lib.nixosSystem {
+        modules = [
+          ./hosts/nixos-laptop/configuration.nix
+          inputs.stylix.nixosModules.stylix
+					inputs.sops-nix.nixosModules.sops
+					{networking.hostName = "nixos-laptop";}
         ];
         specialArgs = {
           inherit systemSettings;
@@ -82,9 +94,25 @@
     };
 
     homeConfigurations = {
-      techtix = home-manager.lib.homeManagerConfiguration {
+      "techtix@nixos-desktop" = home-manager.lib.homeManagerConfiguration {
         modules = [
-          ./home.nix
+          ./hosts/nixos-desktop/home.nix
+          inputs.stylix.homeModules.stylix
+					inputs.sops-nix.homeManagerModules.sops
+					inputs.nur.modules.homeManager.default
+        ];
+        inherit pkgs;
+        extraSpecialArgs = {
+          inherit systemSettings;
+          inherit userSettings;
+          inherit inputs;
+					inherit quickshell;
+        };
+			};
+
+      "techtix@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
+        modules = [
+          ./hosts/nixos-laptop/home.nix
           inputs.stylix.homeModules.stylix
 					inputs.sops-nix.homeManagerModules.sops
 					inputs.nur.modules.homeManager.default
