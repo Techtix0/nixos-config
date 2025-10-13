@@ -35,6 +35,18 @@
       ];
 
       label = [
+				{
+					text = "cmd[update:1000] date +'%H:%M'";
+					text_align = "center";
+          color = "rgb(205, 214, 244)";
+          font_size = 30;
+          font_family = "Noto Sans";
+          rotate = 0; # degrees, counter-clockwise
+
+          position = "0, 550";
+          halign = "center";
+          valign = "center";
+				}
         {
           text = "Hi there, ${userSettings.username}";
           text_align = "center"; # center/right or any value for default left. multi-line text alignment inside label container
