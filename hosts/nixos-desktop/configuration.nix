@@ -35,7 +35,7 @@
       aseprite # Pixel art tool
       protonvpn-gui # VPN
       wireguard-tools # Wireguard tools
-      (callPackage ../../derivations/zlibrary.nix {}) # Z-library
+      # (callPackage ../../derivations/zlibrary.nix {}) # Z-library
     ];
 
     # Enables xone, driver for xbox controller.
