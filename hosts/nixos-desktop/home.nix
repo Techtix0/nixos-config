@@ -17,7 +17,7 @@ in {
     ../../homeModules/desktop/waybar/waybar-sharp.nix # waybar config, sharp corners
     ../../homeModules/utility/git.nix # git/github config
     ../../homeModules/utility/neovim/neovim.nix # neovim config
-		../../homeModules/utility/browsers # web browsers
+		# ../../homeModules/utility/browsers # web browsers
 		../../homeModules/media/music # music player config
 		../../homeModules/desktop/quickshell # quickshell config
   ];

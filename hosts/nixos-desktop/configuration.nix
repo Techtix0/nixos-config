@@ -25,6 +25,7 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+			firefox # browser
       nixVersions.latest # Latest version of the nix language grabbed from nixpkgs
       linuxKernel.packages.linux_zen.xone
       openssh #	ssh client
