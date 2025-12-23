@@ -29,7 +29,7 @@
       vesktop # Discord wrapper
       vscodium # code editor
       pw3270 # 3270 emulator
-			libreoffice # Office software
+      libreoffice # Office software
     ];
 
     # Touchpad behavior

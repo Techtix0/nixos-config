@@ -16,6 +16,7 @@
     environment.systemPackages = with pkgs; [
       vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       git
+			pulseaudio # Needed to get the `pactl` cli tool while using pipewire
 			clang # C compiler
       age # encryption tool
       sops # secret manaing tool
