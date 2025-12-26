@@ -16,13 +16,13 @@
     environment.systemPackages = with pkgs; [
       vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
       git
-			pulseaudio # Needed to get the `pactl` cli tool while using pipewire
-			clang # C compiler
+      pulseaudio # Needed to get the `pactl` cli tool while using pipewire
+      clang # C compiler
       age # encryption tool
       sops # secret manaing tool
       onefetch # git information fetch tool like fastfetch/neofetch
       jq # command line json processor (needed for a sound switching script)
-			xfce.thunar # File explorer
+      xfce.thunar # File explorer
     ];
 
     # Secret management
@@ -33,6 +33,10 @@
     # Set default shell
     users.defaultUserShell = pkgs.zsh;
     programs.zsh.enable = true;
+
+    # Docker
+    virtualisation.docker.enable = true;
+		users.extraGroups.docker.members = [ "${userSettings.username}" ];
 
     # Bootloader.
     boot.loader.systemd-boot.enable = true;
