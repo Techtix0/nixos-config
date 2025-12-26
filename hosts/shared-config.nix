@@ -104,6 +104,9 @@
     fonts.packages = with pkgs; [
       nerd-fonts.fira-mono
       nerd-fonts.symbols-only
+			montserrat
+			fira-code
+			fira-math
     ];
 
     # Removes unwanted KDE packages
