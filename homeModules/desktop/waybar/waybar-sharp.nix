@@ -62,7 +62,14 @@
         "clock" = {
           format = " [ {:%H:%M %a} ] ";
           tooltip = true;
-          tooltip-format = "{:%Y-%m-%d}";
+          tooltip-format = "<pre>{calendar}</pre>";
+					format-alt = " [ {:%Y-%m-%d} ] ";
+					calendar = {
+						mode = "month";
+						format = {
+							today = "<span color='#8caaee'><b><u>{}</u></b></span>";
+						};
+					};
         };
 
         "hyprland/window" = {
