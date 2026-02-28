@@ -17,6 +17,7 @@
     ../../modules/games # game configs
     ../../modules/openrgb/openrgb.nix # openrgb config
     ../../modules/tmux # tmux config
+		../../modules/utility/hercules.nix # Hercules IBM mainframe emulator config
   ];
 
   options = {};
