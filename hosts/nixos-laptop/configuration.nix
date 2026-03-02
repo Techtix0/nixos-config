@@ -23,6 +23,7 @@
     # $ nix search wget
     environment.systemPackages = with pkgs; [
 			jetbrains.idea # intellij (temp)
+			unzip # (temp)
       firefox # Browser
       teams-for-linux # Microsoft teams
       iwgtk # Network managment GUI
