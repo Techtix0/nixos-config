@@ -22,6 +22,7 @@
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
+			jetbrains.idea # intellij (temp)
       firefox # Browser
       teams-for-linux # Microsoft teams
       iwgtk # Network managment GUI
