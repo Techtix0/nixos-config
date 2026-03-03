@@ -24,7 +24,6 @@
     environment.systemPackages = with pkgs; [
 			jetbrains.idea # intellij (temp)
 			unzip # (temp)
-			virtualboxExtpack # (temp)
       firefox # Browser
       teams-for-linux # Microsoft teams
       iwgtk # Network managment GUI
