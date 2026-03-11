@@ -62,6 +62,7 @@
         sensitivity = -0.5;
         force_no_accel = true;
 				touchpad.natural_scroll = true;
+				repeat_rate = 50;
       };
 
       # KEYBINDINGS
