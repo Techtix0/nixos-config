@@ -69,7 +69,7 @@
       "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
       bind = [
         # Example binds, see https://wiki.hyprland.org/Configuring/Binds/ for more
-        "$mainMod, K, killactive,"
+        "$mainMod, Q, killactive,"
         "$mainMod, V, togglefloating,"
         "$mainMod, P, pseudo,"
         "$mainMod, T, exec, $terminal"
@@ -81,28 +81,28 @@
         "$mainMod CTRL SHIFT, B, exec, bash ${userSettings.dotfilesDir}/homeModules/desktop/waybar/startup.sh"
 
         # Move focus with mainMod + arrow keys
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, H, movefocus, l"
+        "$mainMod, L, movefocus, r"
+        "$mainMod, K, movefocus, u"
+        "$mainMod, J, movefocus, d"
 
         # Move windows around
-        "$mainMod CTRL, left, movewindow, l"
-        "$mainMod CTRL, right, movewindow, r"
-        "$mainMod CTRL, up, movewindow, u"
-        "$mainMod CTRL, down, movewindow, d"
+        "$mainMod CTRL, H, movewindow, l"
+        "$mainMod CTRL, L, movewindow, r"
+        "$mainMod CTRL, K, movewindow, u"
+        "$mainMod CTRL, J, movewindow, d"
 
         # Resize windows
-        "$mainMod SHIFT, left, resizeactive, -25 0"
-        "$mainMod SHIFT, right, resizeactive, 25 0"
-        "$mainMod SHIFT, up, resizeactive, 0 25"
-        "$mainMod SHIFT, down, resizeactive, 0 -25"
+        "$mainMod SHIFT, H, resizeactive, -25 0"
+        "$mainMod SHIFT, L, resizeactive, 25 0"
+        "$mainMod SHIFT, K, resizeactive, 0 25"
+        "$mainMod SHIFT, J, resizeactive, 0 -25"
 
         # Workspace navigation
-        "$mainMod ALT, right, workspace, +2"
-        "$mainMod ALT, left, workspace, -2"
-				"$mainMod ALT SHIFT, up, movetoworkspacesilent, +2"
-				"$mainMod ALT SHIFT, down, movetoworkspacesilent, -2"
+        "$mainMod ALT, L, workspace, +2"
+        "$mainMod ALT, H, workspace, -2"
+				"$mainMod ALT SHIFT, K, movetoworkspacesilent, +2"
+				"$mainMod ALT SHIFT, J, movetoworkspacesilent, -2"
       ];
 
       # Volume and brightness controls
