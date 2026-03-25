@@ -50,6 +50,7 @@
       };
       networkmanager.enable = true;
       networkmanager.wifi.backend = "iwd";
+			networkmanager.wifi.scanRandMacAddress = false;
     };
 
     # Enable the X11 windowing system.
