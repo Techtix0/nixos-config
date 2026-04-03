@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-		nur = {
+    nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -11,30 +11,35 @@
     home-manager.url = "github:nix-community/home-manager/release-25.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-		sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.url = "github:Mic92/sops-nix";
 
     stylix = {
-			url = "github:nix-community/stylix/release-25.11";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+      url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
-		quickshell = {
-			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    omnisearch = {
+      url = "git+https://git.bwaaa.monster/omnisearch";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
-		quickshell,
+    quickshell,
+    omnisearch,
     ...
   } @ inputs: let
     # ---- SYSTEM SETTINGS ---- #
@@ -45,7 +50,7 @@
       locale = "en_US.UTF-8"; # select locale
       monitor1 = "HDMI-A-1"; # primary monitor
       monitor2 = "DP-2"; # secondary monitor
-			laptop-monitor = "eDP-1"; # laptop display
+      laptop-monitor = "eDP-1"; # laptop display
     };
 
     # ----- USER SETTINGS ----- #
@@ -53,8 +58,8 @@
       username = "techtix"; # username
       name = "Techtix"; # name/identifier
       dotfilesDir = "/home/${userSettings.username}/.dotfiles"; # absolute path of the local repo
-     # font = "Intel One Mono"; # Selected font
-     # fontPkg = pkgs.intel-one-mono; # Font package
+      # font = "Intel One Mono"; # Selected font
+      # fontPkg = pkgs.intel-one-mono; # Font package
     };
 
     system = systemSettings.system;
@@ -66,8 +71,10 @@
         modules = [
           ./hosts/nixos-desktop/configuration.nix
           inputs.stylix.nixosModules.stylix
-					inputs.sops-nix.nixosModules.sops
-					{networking.hostName = "nixos-desktop";}
+          inputs.sops-nix.nixosModules.sops
+          {networking.hostName = "nixos-desktop";}
+          omnisearch.nixosModules.default
+          {services.omnisearch.enable = true;}
         ];
         specialArgs = {
           inherit systemSettings;
@@ -82,8 +89,8 @@
         modules = [
           ./hosts/nixos-laptop/configuration.nix
           inputs.stylix.nixosModules.stylix
-					inputs.sops-nix.nixosModules.sops
-					{networking.hostName = "nixos-laptop";}
+          inputs.sops-nix.nixosModules.sops
+          {networking.hostName = "nixos-laptop";}
         ];
         specialArgs = {
           inherit systemSettings;
@@ -98,31 +105,31 @@
         modules = [
           ./hosts/nixos-desktop/home.nix
           inputs.stylix.homeModules.stylix
-					inputs.sops-nix.homeManagerModules.sops
-					inputs.nur.modules.homeManager.default
+          inputs.sops-nix.homeManagerModules.sops
+          inputs.nur.modules.homeManager.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
-					inherit quickshell;
+          inherit quickshell;
         };
-			};
+      };
 
       "techtix@nixos-laptop" = home-manager.lib.homeManagerConfiguration {
         modules = [
           ./hosts/nixos-laptop/home.nix
           inputs.stylix.homeModules.stylix
-					inputs.sops-nix.homeManagerModules.sops
-					inputs.nur.modules.homeManager.default
+          inputs.sops-nix.homeManagerModules.sops
+          inputs.nur.modules.homeManager.default
         ];
         inherit pkgs;
         extraSpecialArgs = {
           inherit systemSettings;
           inherit userSettings;
           inherit inputs;
-					inherit quickshell;
+          inherit quickshell;
         };
       };
     };
