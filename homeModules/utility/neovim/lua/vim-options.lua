@@ -32,3 +32,10 @@ vim.keymap.set('n', "<leader>to", '<cmd>tabonly<cr>')
 vim.keymap.set('n', "<leader>tml", '<cmd>+tabmove<cr>')
 vim.keymap.set('n', "<leader>tmh", '<cmd>-tabmove<cr>')
 
+-- Highlight text when the selection is yanked
+vim.api.nvim_create_autocmd("TextYankPost", {
+    callback = function()
+        vim.highlight.on_yank()
+    end,
+})
+
