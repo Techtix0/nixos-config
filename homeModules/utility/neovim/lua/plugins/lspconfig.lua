@@ -3,6 +3,7 @@ return {
 	"neovim/nvim-lspconfig",
 	lazy = false,
 
+	-- TODO: lspconfig will be deprecated. Check docs for conversion to vim.lsp.config
 	-- For more LSPs remember to install them in modules/services/lsp and import it in lsp.nix
 	config = function()
 		local lspconfig = require("lspconfig")
