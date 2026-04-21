@@ -7,13 +7,14 @@ return {
 		-- require("catppuccin").setup({flavour = "mocha"})
 		require("catppuccin").setup({
 			flavour = "frappe",
+			auto_integrations = true,
 			highlight_overrides = {
 				frappe = function(frappe)
             return {
-                LineNr = { fg = frappe.subtext0},
+                LineNr = { fg = frappe.overlay2},
             }
         end,
-			}
+			},
 		})
 		vim.cmd.colorscheme "catppuccin"
 	end
