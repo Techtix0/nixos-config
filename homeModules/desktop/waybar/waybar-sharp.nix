@@ -50,7 +50,7 @@
             "kitty" = "";
             "dolphin" = "";
             "vesktop" = "";
-            "obsidian" = " 󰈙";
+            "title<.*obsidian.*>" = " 󰈙";
             "spotify" = "";
             "steam" = "";
             "minecraft" = "󰍳";
