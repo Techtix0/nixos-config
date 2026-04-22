@@ -6,16 +6,14 @@ return {
 	-- TODO: lspconfig will be deprecated. Check docs for conversion to vim.lsp.config
 	-- For more LSPs remember to install them in modules/services/lsp and import it in lsp.nix
 	config = function()
-		local lspconfig = require("lspconfig")
-
 		-- Lua lsp
-		vim.lsp.enable( "lua_ls" )
+		vim.lsp.enable("lua_ls")
 
 		-- Python lsp
-		vim.lsp.enable( "pylsp" )
+		vim.lsp.enable("pylsp")
 
 		-- Nix lsp
-		vim.lsp.config["nixd"] = {
+		vim.lsp.config("nixd", {
 			settings = {
 				nixd = {
 					formatting = {
@@ -23,20 +21,22 @@ return {
 					},
 				},
 			},
-		}
+		})
+		vim.lsp.enable("nixd")
 
 		-- Rust lsp
-		vim.lsp.config["rust_analyzer"] = {
+		vim.lsp.config("rust_analyzer", {
 			cmd = { "rust-analyzer" },
 			settings = {
 				formatting = {
 					command = { "rustfmt" },
 				},
 			},
-		}
+		})
+		vim.lsp.enable("rust_analyzer")
 
 		-- Html lsp
-		vim.lsp.enable( "html" )
+		vim.lsp.enable("html")
 
 		-- keybinds
 		vim.keymap.set("n", "K", vim.lsp.buf.hover)
