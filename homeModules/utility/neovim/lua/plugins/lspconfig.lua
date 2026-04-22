@@ -9,13 +9,13 @@ return {
 		local lspconfig = require("lspconfig")
 
 		-- Lua lsp
-		lspconfig.lua_ls.setup({})
+		vim.lsp.enable( "lua_ls" )
 
 		-- Python lsp
-		lspconfig.pylsp.setup({})
+		vim.lsp.enable( "pylsp" )
 
 		-- Nix lsp
-		lspconfig.nixd.setup({
+		vim.lsp.config["nixd"] = {
 			settings = {
 				nixd = {
 					formatting = {
@@ -23,20 +23,20 @@ return {
 					},
 				},
 			},
-		})
+		}
 
 		-- Rust lsp
-		lspconfig.rust_analyzer.setup({
+		vim.lsp.config["rust_analyzer"] = {
 			cmd = { "rust-analyzer" },
 			settings = {
 				formatting = {
 					command = { "rustfmt" },
 				},
 			},
-		})
+		}
 
 		-- Html lsp
-		lspconfig.html.setup({})
+		vim.lsp.enable( "html" )
 
 		-- keybinds
 		vim.keymap.set("n", "K", vim.lsp.buf.hover)
