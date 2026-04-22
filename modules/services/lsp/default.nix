@@ -6,6 +6,7 @@
 		./nixd.nix
 		./lua-lsp.nix
 		./rust-analyzer.nix
+		./pylsp.nix
 	];
 }
 
