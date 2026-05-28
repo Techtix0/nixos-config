@@ -36,7 +36,7 @@
     programs.zsh.enable = true;
 
     # Docker
-    virtualisation.docker.enable = true;
+    virtualisation.docker.enable = false;
 		users.extraGroups.docker.members = [ "${userSettings.username}" ];
 
     # Bootloader.
