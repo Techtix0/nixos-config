@@ -6,7 +6,9 @@
   userSettings,
   ...
 }: {
-  imports = [];
+  imports = [
+		../modules/utility/communication/vesktop.nix # discord client
+	];
 
   options = {};
 

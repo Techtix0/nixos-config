@@ -26,7 +26,6 @@
       teams-for-linux # Microsoft teams
       iwgtk # Network managment GUI
       brightnessctl # Monitor brightness control
-      vesktop # Discord wrapper
       vscodium # code editor
       pw3270 # 3270 emulator
       libreoffice # Office software
