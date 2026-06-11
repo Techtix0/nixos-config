@@ -30,7 +30,6 @@
       linuxKernel.packages.linux_zen.xone
       openssh #	ssh client
       cbonsai # terminal screen saver
-      vesktop # discord client
       vlc # media player
       godot # Game engine
       aseprite # Pixel art tool
