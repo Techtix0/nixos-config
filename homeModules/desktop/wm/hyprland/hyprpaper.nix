@@ -2,6 +2,7 @@
   pkgs,
   lib,
   systemSettings,
+	userSettings,
   ...
 }: {
   home.packages = [pkgs.hyprpaper];
@@ -9,14 +10,23 @@
     enable = true;
     settings = {
       preload = [
-        "~/.dotfiles/assets/wallpapers/nixos-wallpaper.png"
-        "~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
+        "${userSettings.dotfilesDir}/assets/wallpapers/nixos-wallpaper.png"
+        "${userSettings.dotfilesDir}/assets/wallpapers/girls_at_pier-blue.jpg"
       ];
 
       wallpaper = [
-        "${systemSettings.monitor1}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
-        "${systemSettings.monitor2}, ~/.dotfiles/assets/wallpapers/girls_at_pier-blue.jpg"
-        "${systemSettings.laptop-monitor}, ~/.dotfiles/assets/wallpapers/nixos-wallpaper.png"
+				{
+      	  monitor = "${systemSettings.monitor1}"; 
+					path = "${userSettings.dotfilesDir}/assets/wallpapers/girls_at_pier-blue.jpg";
+				}
+				{
+      	  monitor = "${systemSettings.monitor2}";
+					path = "${userSettings.dotfilesDir}/assets/wallpapers/girls_at_pier-blue.jpg";
+				}
+				{
+      	  monitor = "${systemSettings.laptop-monitor}";
+					path = "${userSettings.dotfilesDir}/assets/wallpapers/nixos-wallpaper.png";
+				}
       ];
     };
   };
