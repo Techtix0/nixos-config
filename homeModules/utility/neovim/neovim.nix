@@ -13,7 +13,11 @@
       enable = true;
       defaultEditor = true;
 
-      extraLuaConfig = builtins.readFile ./init.lua;
+			# Surpresses warning about changes in nixos-26.11
+			withRuby = false; 
+			withPython3 = false; 
+
+      initLua = builtins.readFile ./init.lua;
     };
 
     home.file = {
