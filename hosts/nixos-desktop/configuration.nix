@@ -35,6 +35,8 @@
       aseprite # Pixel art tool
       protonvpn-gui # VPN
       wireguard-tools # Wireguard tools
+			python3
+			tree
       # (callPackage ../../derivations/zlibrary.nix {}) # Z-library
     ];
 
