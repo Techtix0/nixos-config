@@ -1,7 +1,5 @@
 {
-  pkgs,
-  lib,
-  inputs,
+	pkgs,
   systemSettings,
 	userSettings,
   ...
@@ -11,6 +9,10 @@
     ./hyprlock.nix
     ./wl-clipboard.nix
   ];
+
+	home.packages = [
+    pkgs.killall #	kill all instances of a process
+	];
 
   wayland.windowManager.hyprland = {
     enable = true;
