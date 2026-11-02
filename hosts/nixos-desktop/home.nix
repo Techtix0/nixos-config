@@ -55,7 +55,6 @@ in {
       fastfetch #	system information
       feh #	image viewer
       grim #	screenshot tool for wayland
-      killall #	kill all instances of a process
       obsidian #	note taking app
       slurp #	get coordinates for selected location on screen (used with grim)
       ani-cli # watch anime from the cli

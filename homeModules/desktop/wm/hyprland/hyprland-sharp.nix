@@ -1,7 +1,5 @@
 {
-  pkgs,
-  lib,
-  inputs,
+	pkgs,
   systemSettings,
 	userSettings,
   ...
@@ -12,8 +10,13 @@
     ./wl-clipboard.nix
   ];
 
+	home.packages = [
+    pkgs.killall #	kill all instances of a process
+	];
+
   wayland.windowManager.hyprland = {
     enable = true;
+		configType = "hyprlang"; 
 
     settings = {
       # Waybar startup/refresh script

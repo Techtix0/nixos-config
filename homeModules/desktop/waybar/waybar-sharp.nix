@@ -4,7 +4,7 @@
     enable = true;
     systemd = {
       enable = false; # autostart via hyprland conf
-      target = "graphical-session.target";
+      targets = ["graphical-session.target"];
     };
 
     style = lib.mkForce ./waybar-sharp.css;
